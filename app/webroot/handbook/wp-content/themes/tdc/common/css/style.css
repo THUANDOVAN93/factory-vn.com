@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/* style.css */
+@import url(reset.css);
+@import url(global.css);
+
+
+/* ===== print ===== */
+.print {
+	display: none !important;
+}
+@media print {
+/* print detail start */
+html {
+	overflow-y: auto;
+}
+body {
+	_zoom: 0.8;
+}
+.print {
+	display: block !important;
+}
+.clearfix {
+	overflow: auto;
+	zoom: 1;
+}
+.clearfix:not(:target) {
+	overflow: hidden\9;
+}
+.clearfix {
+	overflow: hidden\9;
+}
+
+/* detail */
+.print {
+	text-align: left;
+}
+body {
+	border: 0;
+}
+#section_header,#aside,#footer {
+	display: none;
+}
+#section_contents,
+#contents,#contents_bgtop,#contents_bgbottom {
+	background-image: none;
+}
+#contents {
+	width: auto;
+}
+#contents_bgtop {
+	padding: 0;
+}
+#contents_bgbottom {
+	padding: 0;
+}
+#article {
+	float: none;
+	width: auto;
+}
+#article h2 img {
+	width: 100%;
+	height: auto;
+}
+#article .section_index h2 {
+	margin: 0;
+}
+#article .section_index h2 img {
+	width: 600px;
+	height: 372px;
+}
+#article .section_index h3 {
+	margin: 1.5em 0 0;
+}
+
+/* print detail end */
+}

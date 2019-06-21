@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* font_meduim.css */
+
+/* fontstyle */
+body,td,th {
+	font-size:14px;
+	line-height:1.5;
+	font-family:"メイリオ","Meiryo","ヒラギノ角ゴ Pro w3","Hiragino Kaku Gothic Pro","Osaka","ＭＳ Ｐゴシック","MS P Gothic","Arial",sans-serif;
+}
+/* for IE */
+body {font-size:100%\9;}
+body th,body td {font-size:125%\9;}
+body:not(:target) {font-size:100%\9 !important;}
+body:not(:target) th {font-size:125%\9 !important;}
+body:not(:target) td {font-size:125%\9 !important;}
+* html body {font-size:100%;}
+* html body th {font-size:100% !important;}
+* html body td {font-size:100% !important;}
+*:first-child+html body {font-size:100%;}
+*:first-child+html body th {font-size:100%;}
+*:first-child+html body th {font-size:100%;}
+h1,h2,h3,h4,h5,h6 {
+	font-size:125%;
+	font-weight:normal;
+}
+
+#fontnav_s a {
+	background-position: 0 0;
+}
+#fontnav_m a {
+	background-position: 0 0;
+}
+#fontnav_l a {
+	background-position: 0 100% !important;
+}

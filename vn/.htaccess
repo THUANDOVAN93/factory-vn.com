@@ -1,0 +1,16 @@
+AuthUserFile /home/tdc/htdocs_test/auth/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Input ID and Password."
+AuthType Basic
+require valid-user
+<Files ~ "^.(htpasswd|htaccess)$">
+    deny from all
+</Files>
+
+<IfModule mod_rewrite.c>
+   RewriteEngine on
+   RewriteRule    ^$ app/webroot/    [L]
+   RewriteRule    (.*) app/webroot/$1 [L]
+   RewriteBase /vn
+</IfModule>
+

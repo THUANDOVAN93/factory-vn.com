@@ -23,3 +23,15 @@
 /app/Config/core.php
 /app/Config/database.php
 /vendors/*
+
+# By ThuanDo
+*.png
+*.zip
+*.jpg
+*.gif
+*.log
+*.jpeg
+*.JPG
+*.bmp
+/app/webroot/upload/*
+/vn/app/webroot/upload/*
