@@ -34,4 +34,5 @@
 *.JPG
 *.bmp
 /app/webroot/upload/*
+/app/View/Layouts/front.ctp
 /vn/app/webroot/upload/*
