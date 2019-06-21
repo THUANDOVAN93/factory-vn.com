@@ -27,7 +27,6 @@
 	<link rel="alternate stylesheet" type="text/css" media="all" href="<?php echo $this->webroot; ?>common/css/font_meduim.css" title="medium" />
 	<link rel="alternate stylesheet" type="text/css" media="all" href="<?php echo $this->webroot; ?>common/css/font_large.css" title="large" />
 	<link rel="canonical" href="http://www.tdc-thai.com/<?php echo (isset($link_canonical) ? $link_canonical : ''); ?>" />
-	<script src="https://maps.google.com/maps/api/js?key=AIzaSyDRe-SLe-oVJhmp1x0wDGUdtVOmFceE8eU&v=quarterly&v=3" type="text/javascript" charset="UTF-8"></script>
 	<script type="text/javascript" src="<?php echo $this->webroot; ?>common/js/jquery.js"></script>
 	<script type="text/javascript" src="<?php echo $this->webroot; ?>common/js/jquery.mousewheel.js"></script>
 	<script type="text/javascript" src="<?php echo $this->webroot; ?>common/js/jquery.jscrollpane.min.js"></script>
