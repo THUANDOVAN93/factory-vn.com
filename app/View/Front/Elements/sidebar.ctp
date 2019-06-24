@@ -15,8 +15,8 @@
 			<div id="sitelogo"><a href="<?php echo $this->webroot; ?>" id="siteid" name="siteid">東京デベロップメントコンサルタント | TOKYO DEVELOPMENT CONSULTANT</a></div>
 			<div id="header_area">ベトナムエリア THAILAND AREA</div>
 			<dl>
-				<dt>現在登録物件数：</dt>
-				<dd><?php echo (number_format($totalBuildingCount)); ?>件</dd>
+				<dt>Currently registered : </dt>
+				<dd><?php echo (number_format($totalBuildingCount)); ?> member</dd>
 			</dl>
 		</div>
 		<!-- /header -->

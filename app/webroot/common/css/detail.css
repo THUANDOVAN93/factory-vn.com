@@ -1197,6 +1197,7 @@ p.detail_read_txt {
 	border-top:1px dotted #7f7f7f;
 	text-align:left;
 	vertical-align: middle;
+	line-height: 24px;
 }
 #contactCnt th {
 	background-color:#e5e5e5;
@@ -1261,10 +1262,11 @@ p.detail_read_txt {
 #contactCnt th .must {
 	display: block;
 	float: right;
-	width: 30px;
-	height: 16px;
+	width: 45px;
+	height: 24px;
 	margin-right: 5px;
 	background: url(../images/contact/icon_must.png) no-repeat top left;
+	background-size: 45px 24px;
 	text-indent: -9999px;
 	line-height: 0;
 }

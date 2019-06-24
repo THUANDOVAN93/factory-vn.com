@@ -558,23 +558,22 @@ dl.contents_fontmenu dt,
 dl.contents_fontmenu dt {
 	width:72px;
 	height:21px;
-	background:url(../images/contents_fontmenu_ttl.png) repeat 0 0;
-	text-indent:-9999px;
+	line-height: 22px;
 }
 li.contents_fontmenu_nav01 a {
 	width:27px;
-	background-position:0 0;
-	background-image:url(../images/contents_fontmenu_btn01.png);
+	text-indent: 0;
+	line-height: 22px;
 }
 li.contents_fontmenu_nav02 a {
 	width:25px;
-	background-position:0 21px;
-	background-image:url(../images/contents_fontmenu_btn02.png);
+	text-indent: 0;
+	line-height: 22px;
 }
 li.contents_fontmenu_nav03 a {
 	width:26px;
-	background-position:0 0;
-	background-image:url(../images/contents_fontmenu_btn03.png);
+	text-indent: 0;
+	line-height: 22px;
 }
 /* contents - header_inquiry */
 .contents_header_inquiry {

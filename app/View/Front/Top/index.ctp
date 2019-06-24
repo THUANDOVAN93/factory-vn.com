@@ -1,22 +1,15 @@
 <script src="<?php echo $this->webroot; ?>common/js/jquery.index.tab.js" type="text/javascript" charset="UTF-8"></script>
 		<div class="index_section_main_discription">
-			東京デベロップメントコンサルタントベトナム(TDC）はベトナムでの工場・工業団地探しをお手伝いいたします。<br>
-			ご希望の条件（エリア、平米、用途、入居時期など）をお伝えいただければ適切な物件をご紹介いたしますので、<br>
-			お気軽にお電話またはメールでご連絡ください。
+			Dactory-vn.com is the place where manufacturers can search factories (land or rental factory), industrial parks and warehouses in Vietnam. <br>
+			Having more than 10 years experience in Vietnam since establishment of 2007, we have wide range of options and reliable networks. <br>
+			Based on your requirements such as location, area, purpose, and when your factory will start operation etc, we will provide option for you! Please feel free to contact us via email or call.
 		</div>
 
 		<div class="index_section_main clearfix">
 			<div class="index_main_full">
 				<p><img style="border-bottom: 2px solid #000" src="<?php echo $this->webroot; ?>common/images/top/index_main_l1_img01.png" width="730" height="174" alt="" /></p>
-				<!-- <div class="index_main_full_btn1">
-					<p class="imgbtn"><a href="<?php echo $this->webroot; ?>factory/area/"><img src="<?php echo $this->webroot; ?>common/images/top/index_main_l1_ttl01.png" width="365" height="123" alt="ベトナム全域の工業団地から探す" /></a></p>
-				</div>
-				<div class="index_main_full_btn2">
-					<p class="imgbtn"><a href="<?php echo $this->webroot; ?>factory/area/all"><img src="<?php echo $this->webroot; ?>common/images/top/index_main_l1_ttr01.png" width="365" height="123" alt="ベトナム全域の物件一覧から探す" /></a></p>
-				</div> -->
 			</div>
-			<p class="search_area_read">ベトナムの工場・工業団地物件を検索したいエリアをクリックして下さい。<br>
-			Please click the area which you want to find factory or industrial park in Vietnam.</p>
+			<p class="search_area_read">Please click the area which you want to find factory, industrial park or warehouse in Vietnam.</p>
 			<p id="map"><img src="<?php echo $this->webroot; ?>common/images/search/factory_index_map.png" alt="" width="730" height="710" border="0" usemap="#Map" />
 				<map name="Map" id="Map">
 					<area shape="rect" coords="140,589,280,619" href="<?php echo $this->webroot; ?>factory/area/list/2/" />
@@ -40,27 +33,6 @@
 					<area shape="rect" coords="38,136,177,165" href="<?php echo $this->webroot; ?>factory/area/list/20/" />
 				</map>
 			</p>
-			<!-- <div class="index_main_s1">
-				<p><img src="<?php echo $this->webroot; ?>common/images/top/index_main_s1_img01.jpg" width="230" height="280" alt="" /></p>
-				<h3><img src="<?php echo $this->webroot; ?>common/images/top/index_main_s1_ttl01.png" width="230" height="92" alt="工場・工業用地を探す" /></h3>
-				<p><img src="<?php echo $this->webroot; ?>common/images/top/index_main_s1_txt01.png" width="230" height="48" alt="工場・倉庫、ベトナムの進出もお任せください。BOI区分地図などの詳細もご覧になれます。" /></p>
-				<p class="imgbtn"><a href="<?php echo $this->webroot; ?>factory/area/"><img src="<?php echo $this->webroot; ?>common/images/top/index_main_s1_btn01.png" width="230" height="70" alt="ベトナム全域の工業団地から探す" /></a></p>
-				<p class="imgbtn"><a href="<?php echo $this->webroot; ?>factory/area/all"><img src="<?php echo $this->webroot; ?>common/images/top/index_main_s1_btn02.png" width="230" height="70" alt="ベトナム全域の物件一覧から探す" /></a></p>
-			</div>
-			<div class="index_main_s2">
-				<p><img src="<?php echo $this->webroot; ?>common/images/top/index_main_s2_img01.jpg" width="230" height="280" alt="" /></p>
-				<h3><img src="<?php echo $this->webroot; ?>common/images/top/index_main_s2_ttl01.png" width="230" height="70" alt="事務所を探す" /></h3>
-				<p><img src="<?php echo $this->webroot; ?>common/images/top/index_main_s2_txt01.png" width="230" height="70" alt="ホーチミン・ハノイ・ダナンの事務所のほか、店舗、ショップなど、多数お取扱いしております。" /></p>
-				<p class="imgbtn"><a href="<?php echo $this->webroot; ?>office/area/"><img src="<?php echo $this->webroot; ?>common/images/top/index_main_s2_btn01_hmc.png" width="230" height="70" alt="ホーチミンで探す" /></a></p>
-				<p class="imgbtn"><a href="<?php echo $this->webroot; ?>office/area/hanoi/"><img src="<?php echo $this->webroot; ?>common/images/top/index_main_s2_btn01_hanoi.png" width="230" height="70" alt="ハノイで探す" /></a></p>
-			</div>
-			<div class="index_main_s3">
-				<p><img src="<?php echo $this->webroot; ?>common/images/top/index_main_s3_img01.jpg" width="230" height="280" alt="" /></p>
-				<h3><img src="<?php echo $this->webroot; ?>common/images/top/index_main_s3_ttl01.png" width="230" height="70" alt="住まいを探す" /></h3>
-				<p><img src="<?php echo $this->webroot; ?>common/images/top/index_main_s3_txt01.png" width="230" height="70" alt="ホーチミン・ハノイ・ダナンのアパート・マンション、コンドミニアム、サービスアパートまで、多数の物件をご紹介" /></p>
-				<p class="imgbtn"><a href="<?php echo $this->webroot; ?>residence/area/"><img src="<?php echo $this->webroot; ?>common/images/top/index_main_s2_btn01_hmc.png" width="230" height="70" alt="ホーチミンで探す" /></a></p>
-				<p class="imgbtn"><a href="<?php echo $this->webroot; ?>residence/area/hanoi/"><img src="<?php echo $this->webroot; ?>common/images/top/index_main_s2_btn01_hanoi.png" width="230" height="70" alt="駅から探す" /></a></p>
-			</div> -->
 		</div>
 		<!-- /index_section_main -->
 
@@ -88,7 +60,7 @@
 <?php         } else if ($addInfoId == '3') { ?>
 				<img src="<?php echo $this->webroot; ?>common/images/top/index_detail_ttl_station.png" width="730" height="50" alt="駅近物件" />
 <?php         } else { ?>
-				<?php echo $addInfo['AddInformation']['name']; ?>物件 / Recommendation
+				<?php //echo $addInfo['AddInformation']['name']; ?>Recommendation
 <?php         } ?>
 			</h3>
 			<ul class="index_detail_nav clearfix">

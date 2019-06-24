@@ -24,16 +24,9 @@
 <!-- /topicpath -->
 
 <div id="contactCnt">
-<!-- <h2>
-	<img src="<?php echo $this->webroot; ?>common/images/contact/header_ttl.png?1" width="730" height="40" alt="お問い合わせ" />
-</h2> -->
-<h3 class="contact_title">お問い合わせ / Inquiry form</h3>
-<p>不動産に関するお問い合わせは、以下のフォームからお送りください。<br>Please send inquiry by this form.</p>
-<ul id="tab">
-	<!-- <li><img src="<?php //echo $this->webroot; ?>common/images/contact/tab01_on.png" alt="工場・工業用地のお問い合わせ" width="243" height="50" /></li> -->
-	<!-- <li><a href="<?php //echo $this->webroot; ?>contact/office/"><img src="<?php //echo $this->webroot; ?>common/images/contact/tab02.png" alt="事務所のお問い合わせ" width="243" height="50" /></a></li>
-	<li><a href="<?php //echo $this->webroot; ?>contact/residence/"><img src="<?php //echo $this->webroot; ?>common/images/contact/tab03.png" alt="住まいのお問い合わせ" width="244" height="50" /></a></li> -->
-</ul>
+
+<h3 class="contact_title">Inquiry form</h3>
+<p>Please send inquiry by this form. <br>Based on your requirements such as location, area, purpose and when your business will start operation etc, we will provide options for you for free! </p>
 <div class="errorTxt">
 <?php $err = isset($validErrors['ContactFactory']['company_name'][0]); ?>
 <?php if ($err) { ?>
@@ -98,50 +91,26 @@
 	<table border="0" cellspacing="0" cellpadding="0" summary="お問い合せフォーム">
 		<col width="25%" />
 		<col width="" />
-		<!-- <tr>
-			<th scope="row">物件名</th>
-			<td>
-				<?php //echo $this->Form->text('ContactFactory.buildings_name', array('class' => 'type02')); ?>
-			</td>
-		</tr> -->
-		<!-- <tr>
-			<th scope="row">会社名 / Company</th>
-			<td>
-				<?php //echo $this->Form->text('ContactFactory.company_name', array('class' => 'type02')); ?>
-			</td>
-		</tr> -->
-		<!-- <tr>
-			<th scope="row">業種</th>
-			<td>
-				<?php //echo $this->Form->text('ContactFactory.industry', array('class' => 'type02')); ?>
-			</td>
-		</tr> -->
 		<tr>
-			<th scope="row"><span class="must">必須</span>お名前 / Name</th>
+			<th scope="row"><span class="must">Required</span>Name</th>
 			<td>
 				<?php echo $this->Form->text('ContactFactory.name', array('class' => 'type01')); ?>
 			</td>
 		</tr>
-		<!-- <tr>
-			<th scope="row">住所</th>
-			<td>
-				<?php //echo $this->Form->text('ContactFactory.address', array('class' => 'type01')); ?>
-			</td>
-		</tr> -->
 		<tr>
-			<th scope="row"><span class="must">必須</span>電話番号 / Phone number</th>
+			<th scope="row"><span class="must">Required</span>Phone number</th>
 			<td>
 				<?php echo $this->Form->text('ContactFactory.tel', array('class' => 'type01')); ?>
 			</td>
 		</tr>
 		<tr>
-			<th scope="row">会社名 / Company</th>
+			<th scope="row">Company</th>
 			<td>
 				<?php echo $this->Form->text('ContactFactory.company_name', array('class' => 'type02')); ?>
 			</td>
 		</tr>
 		<tr>
-			<th scope="row"><span class="must">必須</span>メールアドレス / Mail address</th>
+			<th scope="row"><span class="must">Required</span>Mail address</th>
 			<td>
 				<?php echo $this->Form->text('ContactFactory.email1', array('class' => 'type04')); ?>@
 
@@ -149,85 +118,12 @@
 <?php echo $this->Form->hidden('ContactFactory.email'); ?>
 			</td>
 		</tr>
-		<!-- <tr>
-			<th scope="row">FAX</th>
-			<td>
-				<?php //echo $this->Form->text('ContactFactory.fax', array('class' => 'type01')); ?>
-			</td>
-		</tr>
 		<tr>
-			<th scope="row">BOIゾーン</th>
-			<td>
-				<?php //echo $this->Form->text('ContactFactory.boi_zone', array('class' => 'type02')); ?>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row">ロケーション</th>
-			<td>
-				<?php //echo $this->Form->text('ContactFactory.location', array('class' => 'type02')); ?>
-			</td>
-		</tr> -->
-		<!-- <tr>
-			<th scope="row">進出形態</th>
-			<td>
-				<ul>
-					<li>
-						<?php //echo $this->Form->radio('factory_sub_category', $factorySubCategories1, array('hiddenField'=>false, 'legend'=>false, 'separator'=>'</li><li>')); ?>
-					</li>
-				</ul>
-				<table border="0" cellspacing="0" cellpadding="0">
-					<tr>
-						<th scope="row">必要面積</th>
-						<td>
-							<?php //echo $this->Form->text('ContactFactory.floor_space_site', array('class' => 'type03')); ?>
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2" scope="row">&nbsp;</td>
-					</tr>
-				</table>
-				<ul>
-					<li>
-						<?php //echo $this->Form->radio('factory_sub_category', $factorySubCategories2, array('hiddenField'=>false, 'legend'=>false, 'separator'=>'</li><li>')); ?>
-					</li>
-				</ul>
-				<table border="0" cellspacing="0" cellpadding="0">
-					<tr>
-						<th scope="row">必要面積</th>
-						<td>
-							<?php //echo $this->Form->text('ContactFactory.floor_space_building', array('class' => 'type03')); ?>
-						</td>
-					</tr>
-					<tr>
-						<th scope="row">床耐荷重</th>
-						<td>
-							<?php //echo $this->Form->text('ContactFactory.weight_limit', array('class' => 'type03')); ?>
-						</td>
-					</tr>
-					<tr>
-						<th scope="row">天井高</th>
-						<td>
-							<?php //echo $this->Form->text('ContactFactory.building_height', array('class' => 'type03')); ?>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr> -->
-		<tr>
-			<th scope="row"><span class="must">必須</span>お問い合わせ内容 / Inquiry</th>
+			<th scope="row"><span class="must">Required</span>Inquiry</th>
 			<td>
 				<?php echo $this->Form->textarea('ContactFactory.message', array('cols' => '', 'rows' => '5', 'class' => 'type02')); ?>
 			</td>
 		</tr>
-		<!-- <tr>
-			<th scope="row"><span class="must">必須</span>E-mail</th>
-			<td>
-				<?php //echo $this->Form->text('ContactFactory.email1', array('class' => 'type04')); ?>@
-
-<?php //echo $this->Form->text('ContactFactory.email2', array('class' => 'type04')); ?>
-<?php //echo $this->Form->hidden('ContactFactory.email'); ?>
-			</td>
-		</tr> -->
 	</table>
 	<div id="btn">
 		<ul class="clearfix">
