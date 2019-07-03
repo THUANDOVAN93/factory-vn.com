@@ -292,6 +292,8 @@ body {
 #nav_global_search_box .btn-image {
 	float: left;
 	display: inline-block;
+	width: 40px;
+	height: 36px;
 }
 #nav_global_search_box:after,
 #nav_global_search_box .search-box-input:after {
@@ -492,8 +494,7 @@ body {
 }
 /* contents - contents_nav */
 .contents_nav {
-	float:left;
-	padding-left:370px;
+	float:right;
 	overflow:hidden;
 	_zoom:1;
 }
@@ -892,4 +893,18 @@ li.contents_fontmenu_nav03 a {
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent; 
   border-right:10px solid blue; 
+}
+
+.index_main_full {
+	position: relative;
+}
+
+.index_main_full #nav_global_search_box {
+	position: absolute;
+    bottom: 15%;
+    right: 30%;
+}
+
+#adBlock {
+	display: none !important;
 }

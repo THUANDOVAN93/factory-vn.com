@@ -8,6 +8,18 @@
 		<div class="index_section_main clearfix">
 			<div class="index_main_full">
 				<p><img style="border-bottom: 2px solid #000" src="<?php echo $this->webroot; ?>common/images/top/index_main_l1_img01.png" width="730" height="174" alt="" /></p>
+
+				<div id="nav_global_search_box">
+					<form action="/search/" id="searchbox-tdc" class="search-box">
+						<input type="hidden" name="cx" value="008006212690783945990:ytmaw75eo8u" />
+						<input type="hidden" name="ie" value="utf-8" />
+						<input type="hidden" name="hl" value="en" />
+						<input name="q" type="text" value="<?php echo urldecode( $_REQUEST["q"] ); ?>" class="search-box-input" />
+						<input type="image" name="sa" src="/common/images/nav_global_search_btn.png" class="btn-image">
+					</form>
+					<script type="text/javascript" src="http://www.google.com/cse/tools/onthefly?form=searchbox-tdc&amp;lang=en"></script>
+				</div>
+
 			</div>
 			<p class="search_area_read">Please click the area which you want to find factory, industrial park or warehouse in Vietnam.</p>
 			<p id="map"><img src="<?php echo $this->webroot; ?>common/images/search/factory_index_map.png" alt="" width="730" height="710" border="0" usemap="#Map" />

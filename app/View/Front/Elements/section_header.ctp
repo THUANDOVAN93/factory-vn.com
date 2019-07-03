@@ -2,20 +2,9 @@
 		<!-- contents_header/ -->
 		<div class="contents_header">
 			<ul class="contents_nav">
-				<li class="contents_nav01"><a href="<?php echo $this->webroot; ?>">TOP</a></li>
-				<li class="contents_nav02"><a href="<?php echo $this->webroot; ?>company/?#access">ACCESS</a></li>
 				<li class="contents_nav03"><a href="http://www.tdc-vietnam.com">JAPANESE</a></li>
 			</ul>
-			<dl class="contents_fontmenu">
-				<dt>Font size</dt>
-				<dd>
-					<ul>
-						<li class="contents_fontmenu_nav01"><a href="javascript:void(0);" onclick="setActiveStyleSheet('small'); return false;" onkeypress="setActiveStyleSheet('small'); return false;">S</a></li>
-						<li class="contents_fontmenu_nav02"><a href="javascript:void(0);" onclick="setActiveStyleSheet('medium'); return false;" onkeypress="setActiveStyleSheet('medium'); return false;">M</a></li>
-						<li class="contents_fontmenu_nav03"><a href="javascript:void(0);" onclick="setActiveStyleSheet('large'); return false;" onkeypress="setActiveStyleSheet('large'); return false;">L</a></li>
-					</ul>
-				</dd>
-			</dl>
+			
 		</div>
 		<!-- /contents_header -->
 

@@ -12,12 +12,6 @@
 				<table border="0" cellspacing="0" cellpadding="0" summary="お問い合せフォーム">
 					<col width="25%" />
 					<col width="" />
-					<!-- <tr>
-						<th scope="row">物件名</th>
-						<td>
-							<?php //echo h($contact['buildings_name']); ?>
-						</td>
-					</tr> -->
 					<tr>
 						<th scope="row">お名前 / Name</th>
 						<td>
@@ -42,39 +36,6 @@
 							<?php echo h($contact['email1']); ?>@<?php echo h($contact['email2']); ?>
 						</td>
 					</tr>
-					<!-- <tr>
-						<th scope="row">業種</th>
-						<td>
-							<?php //echo h($contact['industry']); ?>
-						</td>
-					</tr> -->
-					<!-- <tr>
-						<th scope="row">住所</th>
-						<td>
-							<?php //echo h($contact['address']); ?>
-						</td>
-					</tr> -->
-					<!-- <tr>
-						<th scope="row">FAX</th>
-						<td>
-							<?php //echo h($contact['fax']); ?>
-						</td>
-					</tr> -->
-					<!-- <tr>
-						<th scope="row">BOIゾーン</th>
-						<td>
-							<?php //echo h($contact['boi_zone']); ?>
-						</td>
-					</tr> -->
-					<!-- <tr>
-						<th scope="row">ロケーション</th>
-						<td>
-							<?php //echo h($contact['location']); ?>
-						</td>
-					</tr> -->
-					<!-- <tr>
-						<th scope="row">進出形態</th>
-						<td>
 <?php if (isset($contact['factory_sub_category']) && $contact['factory_sub_category'] == "5") { ?>
 							<ul>
 								<li>
