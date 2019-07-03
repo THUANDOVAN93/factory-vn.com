@@ -62,7 +62,7 @@ body {
 	display:block;
 	width:200px;
 	height:110px;
-	background:url(../images/header_siteid.png) repeat 0 0;
+	background:url(../images/header_siteid.png) no-repeat 0 0;
 	text-indent:-9999px;
 }
 #header #header_area {
@@ -486,35 +486,46 @@ body {
 }
 .contents_header a {
 	display:block;
-	height:21px;
-	background-repeat:repeat;
-	background-position:0 0;
-	text-indent:-9999px;
 }
 .contents_header a:hover {
-	background-position:0 21px;
+	text-decoration: none;
 }
 /* contents - contents_nav */
 .contents_nav {
 	float:left;
-	padding-left:455px;
+	padding-left:370px;
 	overflow:hidden;
 	_zoom:1;
 }
 .contents_nav li {
 	float:left;
 	padding-right:15px;
+	padding-left: 10px;
+	line-height: 22px;
+	position: relative;
+}
+.contents_nav li a:before {
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-left: 4px solid #000;
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0;
+	top: 7px;
+}
+.contents_nav li a:hover:before {
+	border-left: 4px solid #d50101;
 }
 .contents_nav li a {
 	float:left;
 }
 li.contents_nav01 a {
-	width:35px;
-	background-image:url(../images/contents_nav_btn01.png);
 }
 li.contents_nav02 a {
-	width:56px;
-	background-image:url(../images/contents_nav_btn02.png);
+}
+li.contents_nav03 a {
 }
 /* contents - fontmenu */
 dl.contents_fontmenu {
@@ -873,4 +884,12 @@ li.contents_fontmenu_nav03 a {
 
 .nav-global-group li {
 	border-bottom: 1px dotted #000;
+}
+
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+  border-right:10px solid blue; 
 }

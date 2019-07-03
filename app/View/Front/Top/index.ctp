@@ -1,6 +1,6 @@
 <script src="<?php echo $this->webroot; ?>common/js/jquery.index.tab.js" type="text/javascript" charset="UTF-8"></script>
 		<div class="index_section_main_discription">
-			Dactory-vn.com is the place where manufacturers can search factories (land or rental factory), industrial parks and warehouses in Vietnam. <br>
+			Factory-vn.com is the place where manufacturers can search factories (land or rental factory), industrial parks and warehouses in Vietnam. <br>
 			Having more than 10 years experience in Vietnam since establishment of 2007, we have wide range of options and reliable networks. <br>
 			Based on your requirements such as location, area, purpose, and when your factory will start operation etc, we will provide option for you! Please feel free to contact us via email or call.
 		</div>

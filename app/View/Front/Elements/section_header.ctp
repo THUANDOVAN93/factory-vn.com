@@ -4,6 +4,7 @@
 			<ul class="contents_nav">
 				<li class="contents_nav01"><a href="<?php echo $this->webroot; ?>">TOP</a></li>
 				<li class="contents_nav02"><a href="<?php echo $this->webroot; ?>company/?#access">ACCESS</a></li>
+				<li class="contents_nav03"><a href="http://www.tdc-vietnam.com">JAPANESE</a></li>
 			</ul>
 			<dl class="contents_fontmenu">
 				<dt>Font size</dt>
