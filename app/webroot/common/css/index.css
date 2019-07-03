@@ -55,7 +55,6 @@
 }
 
 .index_detail_nav {
-	overflow:hidden;
 	position:relative;
 	z-index:5;
 }
@@ -69,7 +68,6 @@
 .index_section_detail {
 	border:1px solid #7f7f7f;
 	padding:10px 12px 25px;
-	position:relative;
 	top:-8px;
 	right:0;
 }
@@ -131,8 +129,6 @@
 	bottom:0;
 	z-index:999;
 	margin:0!important;
-/*	width:155px;
-	height:155px;*/
 }
 .index_section_detail table .index_detail_photo span {
 	display:block;

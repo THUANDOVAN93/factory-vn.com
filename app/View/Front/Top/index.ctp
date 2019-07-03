@@ -20,7 +20,6 @@
 					<area shape="rect" coords="549,539,689,569" href="<?php echo $this->webroot; ?>factory/area/list/7/" />
 					<area shape="rect" coords="140,549,280,579" href="<?php echo $this->webroot; ?>factory/area/list/8/" />
 					<area shape="rect" coords="246,348,385,377" href="<?php echo $this->webroot; ?>factory/area/list/9/" />
-					<!--<area shape="rect" coords="245,484,385,514" href="<?php echo $this->webroot; ?>factory/area/list/10/" />-->
 					<area shape="rect" coords="546,86,685,115" href="<?php echo $this->webroot; ?>factory/area/list/11/" />
 					<area shape="rect" coords="37,175,177,205" href="<?php echo $this->webroot; ?>factory/area/list/12/" />
 					<area shape="rect" coords="397,18,537,48" href="<?php echo $this->webroot; ?>factory/area/list/13/" />
@@ -37,11 +36,6 @@
 		<!-- /index_section_main -->
 
 		<?php echo $this->Form->hidden('factory_tab_img_on',    array('id' => 'factory_tab_img_on',    'value' => $this->webroot . 'common/images/top/index_detail_btn01_on.gif')); ?>
-		<!-- <?php echo $this->Form->hidden('office_tab_img_on',     array('id' => 'office_tab_img_on',     'value' => $this->webroot . 'common/images/top/index_detail_btn02_on.gif')); ?>
-		<?php echo $this->Form->hidden('residence_tab_img_on',  array('id' => 'residence_tab_img_on',  'value' => $this->webroot . 'common/images/top/index_detail_btn03_on.gif')); ?> -->
-		<?php echo $this->Form->hidden('factory_tab_img_off',   array('id' => 'factory_tab_img_off',   'value' => $this->webroot . 'common/images/top/index_detail_btn01.gif')); ?>
-		<!-- <?php echo $this->Form->hidden('office_tab_img_off',    array('id' => 'office_tab_img_off',    'value' => $this->webroot . 'common/images/top/index_detail_btn02.gif')); ?>
-		<?php echo $this->Form->hidden('residence_tab_img_off', array('id' => 'residence_tab_img_off', 'value' => $this->webroot . 'common/images/top/index_detail_btn03.gif')); ?> -->
 
 <?php 
 	foreach ($addInfos as $addInfo) {
@@ -65,14 +59,8 @@
 			</h3>
 			<ul class="index_detail_nav clearfix">
 <?php         if (count($factoryBuildings[$colName]) > 0) { ?>
-				<li class="factory_tab"><a href="#"><img src="<?php echo $this->webroot; ?>common/images/top/index_detail_btn01.gif" width="180" height="45" alt="工場・工業用地" /></a></li>
+				<li class="factory_tab"><span>Factory and Land</span></li>
 <?php         } ?>
-<!-- <?php         if (count($officeBuildings[$colName]) > 0) { ?>
-				<li class="office_tab"><a href="#"><img src="<?php echo $this->webroot; ?>common/images/top/index_detail_btn02.gif" width="180" height="45" alt="事務所" /></a></li>
-<?php         } ?>
-<?php         if (count($residenceBuildings[$colName]) > 0) { ?>
-				<li class="residence_tab"><a href="#"><img src="<?php echo $this->webroot; ?>common/images/top/index_detail_btn03.gif" width="180" height="45" alt="住まい" /></a></li>
-<?php         } ?> -->
 			</ul>
 			<div class="index_section_detail clearfix">
 				<!-- 工場 -->

@@ -7,6 +7,8 @@
 .header_hgroup {
 	padding-bottom:10px;
 	border-bottom:2px solid #191919;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 .ttl_hgroup {
@@ -21,6 +23,7 @@
 	font-size: 1.5em;
 	font-weight: bold;
 	line-height: 1.1;
+	text-transform: uppercase;
 }
 .sttl_hgroup {
 	margin: 50px 0 15px;
@@ -30,6 +33,7 @@
 .sttl_hgroup span {
 	display: block;
 	font-size: 1.3em;
+	text-transform: uppercase;
 	font-weight: bold;
 	line-height: 1.1;
 }

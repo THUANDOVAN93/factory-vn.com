@@ -29,7 +29,6 @@
 		</div>
 		<ul>
 			<li><a href="/company/">About us</a></li>
-			<li><a href="/recruit/">Recruitment information</a></li>
 			<li><a href="/privacy/">Privacy policy</a></li>
 		</ul>
 		<dl class="info">

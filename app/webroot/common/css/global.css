@@ -90,28 +90,20 @@ body {
 }
 
 /* header - nav_global */
-#nav_global {
-	margin-top:-5px;
-}
 #nav_global a:hover {
-	background-position:200px 0 !important;
+	text-decoration: none;
 }
 #nav_global ul {
 }
 #nav_global .area_title {
-	width:200px;
-	height:45px;
 	margin-top:20px;
-	background-repeat:repeat;
-	background-position:0 0;
-	text-indent:-9999px;
 }
 #nav_global #nav_global_search.area_title {
-	height:42px;
-	background-image:url(../images/nav_global_search_ttl.png);
+	color: #d50101;
 }
 #nav_global #nav_global_factory.area_title {
-	background-image:url(../images/nav_global_factory_ttl.png);
+	font-weight: bold;
+	font-size: 12px;
 }
 #nav_global #nav_global_office.area_title {
 	background-image:url(../images/nav_global_office_ttl.png);
@@ -119,29 +111,25 @@ body {
 #nav_global #nav_global_residence.area_title {
 	background-image:url(../images/nav_global_residence_ttl.png);
 }
+
+#nav_global #nav_global_about {
+	margin: 10px 0 5px 0;
+	font-weight: bold;
+	font-size: 12px;
+}
+
 #nav_global #nav_global_about.area_title {
-	height:60px;
-	background-image:url(../images/nav_global_about_ttl.png);
 }
 #nav_global li a {
 	display:block;
-	width:200px;
-	height:38px;
-	background-repeat:repeat;
-	background-position:0 0;
-	text-indent:-9999px;
-}
+}	
 .nav_global_factory01 a {
-	background-image:url(../images/nav_global_factory_btn01.png);
 }
 .nav_global_factory02 a {
-	background-image:url(../images/nav_global_factory_btn02.png);
 }
 .nav_global_factory03 a {
-	background-image:url(../images/nav_global_factory_btn03.png);
 }
 .nav_global_factory04 a {
-	background-image:url(../images/nav_global_factory_btn04.png);
 }
 .nav_global_office01 a {
 	background-image:url(../images/nav_global_office_btn01.png);
@@ -180,30 +168,22 @@ body {
 	background-image:url(../images/nav_global_residence_btn06.png);
 }
 .nav_global_about01 a {
-	background-image:url(../images/nav_global_about_btn01.png);
 }
 .nav_global_about02 a {
-	background-image:url(../images/nav_global_about_btn02.png);
 }
 .nav_global_about03 a {
 	background-image:url(../images/nav_global_about_btn03.png);
 }
 .nav_global_about04 a {
-	background-image:url(../images/nav_global_about_btn04.png);
 }
 .nav_global_about05 a {
 	background-image:url(../images/nav_global_about_btn05.png);
 }
 .nav_global_about06 a {
-	background-image:url(../images/nav_global_about_btn06.png);
 }
 #nav_global li.last {
 	border-bottom: solid 1px #7F7F7F;
 }
-#nav_global li.last a {
-	height: 37px;
-}
-
 /* header - nav_global_sub */
 #nav_global_sub {
 	margin:10px 0 0;
@@ -217,11 +197,10 @@ body {
 	height:13px;
 	background-repeat:repeat;
 	background-position:0 0;
-	text-indent:-9999px;
 	line-height:13px;
 }
 #nav_global_sub a:hover {
-	background-position:0 13px;
+	text-decoration: none;
 }
 .nav_global_sub01 {
 	width:59px;
@@ -235,11 +214,9 @@ body {
 }
 .nav_global_sub02 a {
 	width:61px;
-	background-image:url(../images/nav_global_sub02.png);
 }
 .nav_global_sub03 a {
 	width:61px;
-	background-image:url(../images/nav_global_sub03.png);
 }
 #nav_global_guide a {
 	display:block;
@@ -275,15 +252,18 @@ body {
 	background-position:200px 0;
 }
 #nav_global_factlink a {
+	border: 1px solid #ccc;
 	display:block;
 	width:200px;
 	height:80px;
 	margin-top:20px;
-	background:url(../images/nav_global_factlink.png) repeat 0 0;
+	background:url(../images/nav_global_factlink.png) no-repeat center center;
+	background-size: contain;
 	text-indent:-9999px;
 }
 #nav_global_factlink a:hover {
-	background-position:200px 0;
+	border: 1px solid red;
+	opacity: 0.8;
 }
 #nav_global_thai100 a {
 	display:block;
@@ -409,48 +389,41 @@ body {
 	padding:20px 22px 20px 0;
 }
 #footer li a {
+	color: #fff;
 	float:left;
 	display:block;
 	height:13px;
 	background-repeat:repeat-y;
 	background-position:0 0;
-	text-indent:-9999px;
 	line-height:13px;
+	text-decoration: none;
 }
 #footer li a:hover {
-	background-position:0 13px;
+	opacity: 0.8;
 }
 #footer li.footer_nav01 a {
 	width:65px;
-	background-image:url(../images/footer_btn01.png);
 }
 #footer li.footer_nav02 a {
 	width:65px;
-	background-image:url(../images/footer_btn02.png);
 }
 #footer li.footer_nav03 a {
 	width:65px;
-	background-image:url(../images/footer_btn03.png);
 }
 #footer li.footer_nav04 a {
 	width:45px;
-	background-image:url(../images/footer_btn04.png);
 }
 #footer li.footer_nav05 a {
 	width:87px;
-	background-image:url(../images/footer_btn05.png);
 }
 #footer li.footer_nav06 a {
 	width:60px;
-	background-image:url(../images/footer_btn06.png);
 }
 #footer li.footer_nav07 a {
 	width:76px;
-	background-image:url(../images/footer_btn07.png);
 }
 #footer li.footer_nav08 a {
 	width:130px;
-	background-image:url(../images/footer_btn08.png);
 }
 #footer li.footer_nav09 a {
 	width:82px;
@@ -461,17 +434,17 @@ body {
 	background-image:url(../images/footer_btn10.png);
 }
 #footer .index_bnr {
+	display: flex;
     text-align: center;
     margin: 0 auto 10px;
 }
 #footer .index_bnr dl {
-    display: inline-block;
-    margin: 0 5px;
+	width: 33.33%;
 }
 #footer .index_bnr dl dd a {
     display: block;
+    font-size: 10px;
     padding: 5px 10px;
-    border-bottom: solid 1px #fff;
     text-align: left;
     background: url(../images/arrow_footer.png) no-repeat 97% center;
 }
@@ -495,11 +468,11 @@ body {
 
 }
 #copyright {
+	color: #fff;
 	clear:both;
 	height:12px;
-	background:url(../images/footer_copyright.png) repeat 0 0;
-	text-indent:-9999px;
 	line-height:12px;
+	text-align: center;
 }
 
 /* contents */
@@ -841,4 +814,63 @@ li.contents_fontmenu_nav03 a {
 
 .cse .gs-result .gs-snippet, .gs-result .gs-snippet, .cse .gs-spelling-original, .gs-spelling-original{
 	font-size:11px !important;
+}
+
+.icon-greater {
+	padding: 5px 12px 5px 15px;
+	background: url(../images/icon_topicpath.gif) no-repeat 0 50%;
+}
+
+.icon-greater:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.factory_tab {
+	position: relative;
+}
+
+.factory_tab span {
+	background: #d50101;
+	color: #fff;
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 10px 30px;
+}
+
+.factory_tab span:after {
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #d50101;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 45%;
+	width: 0;
+	height: 0;
+}
+
+.contact-title {
+	font-size: 20px;
+	position: relative;
+}
+
+.contact-title:after {
+	bottom: 0;
+	content: "CONTACT";
+	color: #d50101;
+	display: block;
+	font-size: 10px;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: 40px;
+}
+
+.nav-global-group li {
+	border-bottom: 1px dotted #000;
 }
