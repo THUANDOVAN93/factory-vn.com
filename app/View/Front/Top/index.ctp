@@ -9,13 +9,13 @@
 			<div class="index_main_full">
 				<p><img style="border-bottom: 2px solid #000" src="<?php echo $this->webroot; ?>common/images/top/index_main_l1_img01.png" width="730" height="174" alt="" /></p>
 
-				<div id="nav_global_search_box">
+				<div id="nav_global_search_box" class="home_page">
 					<form action="/search/" id="searchbox-tdc" class="search-box">
 						<input type="hidden" name="cx" value="008006212690783945990:ytmaw75eo8u" />
 						<input type="hidden" name="ie" value="utf-8" />
 						<input type="hidden" name="hl" value="en" />
 						<input name="q" type="text" value="<?php echo urldecode( $_REQUEST["q"] ); ?>" class="search-box-input" />
-						<input type="image" name="sa" src="/common/images/nav_global_search_btn.png" class="btn-image">
+						<input type="button" name="sa" class="btn-image" value="SEARCH">
 					</form>
 					<script type="text/javascript" src="http://www.google.com/cse/tools/onthefly?form=searchbox-tdc&amp;lang=en"></script>
 				</div>

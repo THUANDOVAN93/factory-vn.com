@@ -194,22 +194,23 @@ class FrontContactController extends FrontController {
 
 		//メールの送信
 		if ($this->request->is('post')) {
-			$admin_email_from = "factlinkportvn@gmail.com";
+			$admin_email_from = "factoryvn@gmail.com";
 			$admin_email_to = "info@fact-link.com.vn";
-			$admin_email_cc = array( "sato@tdc-thai.com", "kuwada@fact-link.com.vn", "sale3@fact-link.com.vn" );
+			//$admin_email_cc = array( "sato@tdc-thai.com", "kuwada@fact-link.com.vn", "sale3@fact-link.com.vn" );
+			//$admin_email_cc = array( "yukikoyazumi@fact-depot.com", "thuandovan93@gmail.com" );
 
 			$category = "";
 			if ($this->building == "residence") {
 				$category = "Residence";
-				$category_txt = "住まい";
+				$category_txt = "Residence";
 			}
 			elseif ($this->building == "office") {
 				$category = "Office";
-				$category_txt = "事務所";
+				$category_txt = "Office";
 			}
 			elseif ($this->building == "factory") {
 				$category = "Factory";
-				$category_txt = "工場・工業用地";
+				$category_txt = "Factory and Industrial land";
 			}
 
 			$ary_vars = array (
@@ -229,7 +230,7 @@ class FrontContactController extends FrontController {
 				$email->from($this->request->data['Contact'.$category]['email']);
 
 				$email->to($admin_email_to);
-				$email->subject('【不動産ベトナム】'.$category_txt.'のお問い合わせ');
+				$email->subject('【Real estate Vietnam】Inquiry of'.$category_txt);
 				if($email->send()){
 					//echo "送信できた";
 				}
@@ -242,7 +243,7 @@ class FrontContactController extends FrontController {
 				$email->viewVars($ary_vars);
 				$email->from($admin_email_from);
 				$email->to($this->request->data['Contact'.$category]['email']);
-				$email->subject('【TDC】'.$category_txt.'お問い合わせありがとうございます。');				
+				$email->subject('【FACTORY-VN】'.$category_txt.'Thank you for your inquiry.');				
 				if($email->send()){
 					//echo "送信できた";
 				}
