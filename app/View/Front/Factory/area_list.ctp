@@ -1,5 +1,3 @@
-<!-- <script src="http://maps.google.com/maps/api/js?v=3&amp;sensor=false" type="text/javascript" charset="UTF-8"></script> -->
-<!-- <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCQWPZDltSn_A84dV_CXhNBPo802JmZYoA"></script> -->
 <script src="<?php echo $this->webroot; ?>common/js/jquery.viewareamap.js" type="text/javascript" charset="UTF-8"></script>
 <script src="<?php echo $this->webroot; ?>common/js/jquery.searchcontrol.js" type="text/javascript" charset="UTF-8"></script>
 <script type="text/javascript" src="<?php echo $this->webroot; ?>common/js/list.js"></script>
@@ -7,14 +5,15 @@
 		<!-- topicpath/ -->
 		<ul id="topicpath">
 			<li class="home"><a href="<?php echo $this->webroot; ?>">TOP</a></li>
-			<li><a href="<?php echo $this->webroot; ?>factory/area/">工場・工業用地を探す ベトナム全域工業団地から探す</a></li>
-			<li><?php echo h($factoryArea['FactoryArea']['name']); ?>の物件一覧</li>
+			<li><a href="<?php echo $this->webroot; ?>factory/area/">Search factory / industrial site Search from all industrial areas in Vietnam</a></li>
+			<li>Properties in <?php echo h($factoryArea['FactoryArea']['name']); ?></li>
 		</ul>
 		<!-- /topicpath -->
 
 		<!-- search_header/ -->
 		<div class="search_header clearfix">
-			<h2><img src="<?php echo $this->webroot; ?>common/images/search/factory_header_ttl.png" width="730" height="40" alt="ベトナム全域工業団地から探す" /></h2>
+			<h2 class="title-row search-title">Search from all industrial areas in Vietnam
+			</h2>
 		</div>
 		<!-- /search_header -->
 

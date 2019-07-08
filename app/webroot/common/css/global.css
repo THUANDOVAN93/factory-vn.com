@@ -733,7 +733,7 @@ li.contents_fontmenu_nav03 a {
 	background-image:none;
 }
 #topicpath li a {
-	text-decoration:underline;
+	text-decoration:none;
 }
 #topicpath li a:hover {
 	text-decoration:none;
@@ -932,6 +932,21 @@ li.contents_fontmenu_nav03 a {
 	background: #000;
 }
 
-#adBlock {
-	display: none !important;
+.title-row {
+	font-size: 20px;
+	position: relative;`
+}
+
+.title-row:after {
+	bottom: 0;
+	color: #d50101;
+	display: block;
+	font-size: 8px;
+	font-weight: bold;
+	position: absolute;
+	right: 0;
+}
+
+.search-title:after {
+	content: "SEARCH BY INDUSTRIAL PARK";
 }

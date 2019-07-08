@@ -11,13 +11,14 @@
 
 				<div id="nav_global_search_box" class="home_page">
 					<form action="/search/" id="searchbox-tdc" class="search-box">
-						<input type="hidden" name="cx" value="008006212690783945990:ytmaw75eo8u" />
+						<input type="hidden" name="cx" value="008006212690783945990:gs30z2ssuem" />
 						<input type="hidden" name="ie" value="utf-8" />
 						<input type="hidden" name="hl" value="en" />
 						<input name="q" type="text" value="<?php echo urldecode( $_REQUEST["q"] ); ?>" class="search-box-input" />
-						<input type="button" name="sa" class="btn-image" value="SEARCH">
+						<input type="submit" name="sa" class="btn-image" value="SEARCH">
 					</form>
-					<script type="text/javascript" src="http://www.google.com/cse/tools/onthefly?form=searchbox-tdc&amp;lang=en"></script>
+					<!-- <script type="text/javascript" src="http://www.google.com/cse/tools/onthefly?form=searchbox-tdc&amp;lang=en"></script> -->
+					<script async src="https://cse.google.com/cse.js?cx=008006212690783945990:gs30z2ssuem"></script>
 				</div>
 
 			</div>
@@ -208,74 +209,7 @@
 						<div id="<?php echo $colName; ?>Page_office" class="pagination"></div>
 						<p class="next"><a id="<?php echo $colName; ?>Next_office" href="#"><span>next</span></a></p>
 					</div>
-				</div>
-				<!-- 住まい -->
-				<div class="residence_tab_contents tab_contents">
-					<div id="<?php echo $colName; ?>List_residence" class="clearfix">
-<?php         if ($addInfo['AddInformation']['id'] == '1' || $addInfo['AddInformation']['id'] == '2') { ?>
-<?php             //1段の場合 ?>
-<?php             foreach ($residenceBuildings[$colName] as $residenceBuildingSel) { ?>
-						<table summary="<?php echo $addInfo['AddInformation']['name']; ?>物件">
-							<tr>
-<?php                 foreach ($residenceBuildingSel as $residenceBuilding) { ?>
-<?php                     if (count($residenceBuilding) > 0) { ?>
-								<td>
-									<a href="<?php echo $this->webroot; ?>residence/area/detail/<?php echo h($residenceBuilding['ResidenceBuilding']['id']); ?>"><span class="index_detail_photo">
-<?php                         if (isset($residenceBuilding['ResidenceBuilding']['newly']) && $residenceBuilding['ResidenceBuilding']['newly'] == '1') { ?>
-									<span><img src="<?php echo $this->webroot; ?>common/images/top/index_detail_new.gif" alt="" /></span>
-<?php                         } ?>
-<?php                         if (isset($residenceBuilding['ResidencePhoto']['path'])) { ?>
-									<img src="<?php echo $this->webroot; ?>upload/ResidenceBuildings/tmb_main_<?php echo $residenceBuilding['ResidencePhoto']['path']; ?>" alt="<?php h($residenceBuilding['ResidencePhoto']['caption']); ?>" />
-<?php                         } else { ?>
-									<img src="<?php echo $this->webroot; ?>common/images/noimage-list.png" alt="NO IMAGE" />
-<?php                         } ?>
-									</span></a>
-									<p class="index_detail_text"><a href="<?php echo $this->webroot; ?>residence/area/detail/<?php echo h($residenceBuilding['ResidenceBuilding']['id']); ?>"><?php echo h($residenceBuilding['ResidenceBuilding']['name']); ?></a></p>
-								</td>
-<?php                     } else { ?>
-								<td>&nbsp;</td>
-<?php                     } ?>
-<?php                 } ?>
-							</tr>
-						</table>
-<?php             } ?>
-<?php         } else { ?>
-<?php             //2段の場合 ?>
-<?php             foreach ($residenceBuildings[$colName] as $residenceBuildingSel) { ?>
-						<table summary="<?php echo $addInfo['AddInformation']['name']; ?>物件">
-<?php                 foreach ($residenceBuildingSel as $residenceBuildingRow) { ?>
-							<tr>
-<?php                     foreach ($residenceBuildingRow as $residenceBuilding) { ?>
-<?php                         if (count($residenceBuilding) > 0) { ?>
-								<td>
-									<a href="<?php echo $this->webroot; ?>residence/area/detail/<?php echo h($residenceBuilding['ResidenceBuilding']['id']); ?>"><span class="index_detail_photo">
-<?php                             if (isset($residenceBuilding['ResidenceBuilding']['newly']) && $residenceBuilding['ResidenceBuilding']['newly'] == '1') { ?>
-									<span><img src="<?php echo $this->webroot; ?>common/images/top/index_detail_new.gif" alt="" /></span>
-<?php                             } ?>
-<?php                             if (isset($residenceBuilding['ResidencePhoto']['path'])) { ?>
-									<img src="<?php echo $this->webroot; ?>upload/ResidenceBuildings/tmb_main_<?php echo $residenceBuilding['ResidencePhoto']['path']; ?>" alt="<?php h($residenceBuilding['ResidencePhoto']['caption']); ?>" />
-<?php                             } else { ?>
-									<img src="<?php echo $this->webroot; ?>common/images/noimage-list.png" alt="NO IMAGE" />
-<?php                             } ?>
-									</span></a>
-									<p class="index_detail_text"><a href="<?php echo $this->webroot; ?>residence/area/detail/<?php echo h($residenceBuilding['ResidenceBuilding']['id']); ?>"><?php echo h($residenceBuilding['ResidenceBuilding']['name']); ?></a></p>
-								</td>
-<?php                         } else { ?>
-								<td><p style="height:178px;"></p></td>
-<?php                         } ?>
-<?php                     } ?>
-							</tr>
-<?php                 } ?>
-						</table>
-<?php             } ?>
-<?php         } ?>
-					</div>
-					<div class="slider_nav">
-						<p class="prev"><a id="<?php echo $colName; ?>Prev_residence" href="#"><span>prev</span></a></p>
-						<div id="<?php echo $colName; ?>Page_residence" class="pagination"></div>
-						<p class="next"><a id="<?php echo $colName; ?>Next_residence" href="#"><span>next</span></a></p>
-					</div>
-				</div>
+				</div>				
 			</div>
 		</div>
 		<!-- /tab_area -->

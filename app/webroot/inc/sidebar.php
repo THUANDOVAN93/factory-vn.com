@@ -18,13 +18,14 @@
 		<div id="nav_global_search" class="area_title">KEYWORD</div>
 		<div id="nav_global_search_box">
 			<form action="/search/" id="searchbox-tdc" class="search-box">
-				<input type="hidden" name="cx" value="008006212690783945990:ytmaw75eo8u" />
+				<input type="hidden" name="cx" value="008006212690783945990:gs30z2ssuem" />
 				<input type="hidden" name="ie" value="utf-8" />
 				<input type="hidden" name="hl" value="ja" />
 				<input name="q" type="text" value="<?php echo urldecode( $_REQUEST["q"] ); ?>" class="search-box-input" />
 				<input type="image" name="sa" src="/common/images/nav_global_search_btn.png" class="btn-image">
 			</form>
-			<script type="text/javascript" src="http://www.google.com/cse/tools/onthefly?form=searchbox-tdc&amp;lang=en"></script>
+			<script async src="https://cse.google.com/cse.js?cx=008006212690783945990:gs30z2ssuem"></script>
+			<!-- <script type="text/javascript" src="http://www.google.com/cse/tools/onthefly?form=searchbox-tdc&amp;lang=en"></script> -->
 		</div>
 		<!-- <div id="nav_global_factory" class="area_title">Search Factory, Industrial Park and Warehouse</div>
 		<ul class="nav-global-group">
