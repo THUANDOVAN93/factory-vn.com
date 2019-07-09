@@ -1,10 +1,3 @@
-<?php
-/*
-// 工場の詳細ではマップいらないみたい。
-<script src="http://maps.google.com/maps/api/js?v=3&sensor=false" type="text/javascript" charset="UTF-8"></script>
-<script type="text/javascript" src="<?php echo $this->webroot; ?>common/js/jquery.map.detail.js"></script>
-*/
-?>
 <script type="text/javascript" src="<?php echo $this->webroot; ?>common/js/detail.js"></script>
 <script type="text/javascript" src="<?php echo $this->webroot; ?>common/js/jquery.colorbox-min.js"></script>
 <script type="text/javascript" src="<?php echo $this->webroot; ?>common/js/modal.js"></script>
@@ -25,15 +18,15 @@
 		<ul id="topicpath">
 			<li class="home"><a href="<?php echo $this->webroot; ?>">TOP</a></li>
 			<?php if ( $this->params['url']['area'] == 'all' ) { ?>
-			<li><a href="<?php echo $this->webroot; ?>factory/area/all/">工場・工業用地を探す ベトナム全域の物件一覧から探す</a></li>
+			<li><a href="<?php echo $this->webroot; ?>factory/area/all/">Find a factory / industrial site Search from a list of properties in all of Vietnam</a></li>
 			<?php } elseif ( $this->params['url']['area'] == 'south' ) { ?>
-			<li><a href="<?php echo $this->webroot; ?>factory/area/south/">工場・工業用地を探す ベトナム南部の物件一覧から探す</a></li>
+			<li><a href="<?php echo $this->webroot; ?>factory/area/south/">Search factory / industrial site Search from a list of properties in southern Vietnam</a></li>
 			<?php } elseif ( $this->params['url']['area'] == 'north' ) { ?>
-			<li><a href="<?php echo $this->webroot; ?>factory/area/north/">工場・工業用地を探す ベトナム北部の物件一覧から探す</a></li>
+			<li><a href="<?php echo $this->webroot; ?>factory/area/north/">Search factory / industrial site Search from a list of properties in northern Vietnam</a></li>
 			<?php } elseif ( $this->params['url']['area'] == 'central' ) { ?>
-			<li><a href="<?php echo $this->webroot; ?>factory/area/central/">工場・工業用地を探す ベトナム中部の物件一覧から探す</a></li>
+			<li><a href="<?php echo $this->webroot; ?>factory/area/central/">Find factory / industrial site Search from a list of properties in central Vietnam</a></li>
 			<?php } else { ?>
-			<li><a href="<?php echo $this->webroot; ?>factory/area/">工場・工業用地を探す ベトナム全域工業団地から探す</a></li>
+			<li><a href="<?php echo $this->webroot; ?>factory/area/">Search factory / industrial site Search from all industrial areas in Vietnam</a></li>
 			<?php } ?>
 			<li><?php echo h($factoryBuilding['FactoryBuilding']['name']); ?></li>
 		</ul>
@@ -41,8 +34,8 @@
 
 		<!-- detail_header/ -->
 		<div class="detail_header clearfix">
-			<h1><img src="<?php echo $this->webroot; ?>common/images/search/detail_header_ttl.png" width="142" height="40" alt="物件情報" /></h1>
-			<p class="imgbtn"><a href="mailto:?subject=TOKYO DEVELOPMENT CONSULTANT&amp;body=<?php echo $this->Html->url('', true); ?>"><img src="<?php echo $this->webroot; ?>common/images/search/btn_smartphone.png" width="270" height="37" alt="この物件の情報を携帯・スマホへ送る" /></a></p>
+			<h1 class="title-row">Property Information</h1>
+			<!-- <p class="imgbtn"><a href="mailto:?subject=TOKYO DEVELOPMENT CONSULTANT&amp;body=<?php echo $this->Html->url('', true); ?>"><img src="<?php echo $this->webroot; ?>common/images/search/btn_smartphone.png" width="270" height="37" alt="この物件の情報を携帯・スマホへ送る" /></a></p> -->
 		</div>
 		<!-- /detail_header -->
 
@@ -89,13 +82,13 @@
 			<div class="detail_read_section clearfix">
 				<ul class="clearfix areaIcon">
 <?php     if (isset($factoryBuilding['FactoryBuilding']['giz']) && !empty($factoryBuilding['FactoryBuilding']['giz'])) { ?>
-					<li><img src="<?php echo $this->webroot; ?>common/images/search/search_column_factory_giz.png" alt="一般加工区（GIZ）" /></li>
+					<li style="padding: 2px;" class="border-gray bk-gray">General Processing Zone (GIZ)</li>
 <?php     } ?>
 <?php     if (isset($factoryBuilding['FactoryBuilding']['epz']) && !empty($factoryBuilding['FactoryBuilding']['epz'])) { ?>
-					<li><img src="<?php echo $this->webroot; ?>common/images/search/search_column_factory_epz.png" alt="輸出加工区（EPZ）" /></li>
+					<li style="padding: 2px;" class="border-gray bk-gray">Output Processing Zone (EPZ)</li>
 <?php     } ?>
 <?php     if (isset($factoryBuilding['FactoryBuilding']['fz']) && !empty($factoryBuilding['FactoryBuilding']['fz'])) { ?>
-					<li><img src="<?php echo $this->webroot; ?>common/images/search/search_column_factory_fz.png" alt="フリーゾーン（FZ）" /></li>
+					<li style="padding: 2px;" class="border-gray bk-gray">Free zone (FZ)</li>
 <?php     } ?>
 					<li><img src="<?php echo $this->webroot; ?>common/images/search/search_column_factory_industrial<?php echo h($factoryBuilding['FactoryBuilding']['industrial_park_id']); ?>.png" alt="工業団地" /></li>
 				</ul>
@@ -107,19 +100,19 @@
 						<td><?php echo h(Configure::read('BoiZone.' . $factoryBuilding['FactoryBuilding']['boi_zone'])); ?></td>
 					</tr-->
 					<tr>
-						<th>開発業者<span>Developer</span></th>
+						<th><span>Developer</span></th>
 						<td><?php echo h($factoryBuilding['FactoryBuilding']['developer']); ?></td>
 					</tr>
 					<tr>
-						<th>エリア<span>Area</span></th>
+						<th><span>Area</span></th>
 						<td><?php echo h($factoryBuilding['FactoryArea']['name']); ?></td>
 					</tr>
 					<tr>
-						<th>住所<span>Address</span></th>
+						<th><span>Address</span></th>
 						<td><?php echo h($factoryBuilding['FactoryBuilding']['address']); ?></td>
 					</tr>
 					<tr>
-						<th>海抜<span>Above sea levels</span></th>
+						<th><span>Above sea levels</span></th>
 						<td>
 <?php if (isset($factoryBuilding['FactoryBuilding']['altitude']) && !empty($factoryBuilding['FactoryBuilding']['altitude'])) { ?>
 							<?php echo number_format(h(str_replace(',','',$factoryBuilding['FactoryBuilding']['altitude']))); ?>m
@@ -129,7 +122,7 @@
 						</td>
 					</tr>
 					<tr>
-						<th>開発完成年<span>Completion year</span></th>
+						<th><span>Completion year</span></th>
 						<td>
 <?php if (isset($factoryBuilding['FactoryBuilding']['complated']) && !empty($factoryBuilding['FactoryBuilding']['complated'])) { ?>
 							<?php echo h($factoryBuilding['FactoryBuilding']['complated']); ?>年
@@ -139,7 +132,7 @@
 						</td>
 					</tr>
 					<tr>
-						<th>開発面積<span>Site area</span></th>
+						<th><span>Site area</span></th>
 						<td>
 <?php if (isset($factoryBuilding['FactoryBuilding']['develop_area']) && !empty($factoryBuilding['FactoryBuilding']['develop_area'])) { ?>
 							<?php echo number_format(h(str_replace(',','',$factoryBuilding['FactoryBuilding']['develop_area']))); ?>ha
@@ -149,7 +142,7 @@
 						</td>
 					</tr>
 					<tr>
-						<th>リース有効期限<span>Lease expiration year</span></th>
+						<th><span>Lease expiration year</span></th>
 						<td>
 <?php if (isset($factoryBuilding['FactoryBuilding']['lease_expiration']) && !empty($factoryBuilding['FactoryBuilding']['lease_expiration'])) { ?>
 							<?php echo h($factoryBuilding['FactoryBuilding']['lease_expiration']); ?>年
@@ -159,7 +152,7 @@
 						</td>
 					</tr>
 					<tr>
-						<th>主な入居企業一覧<span>Notable Tenants</span></th>
+						<th><span>Notable Tenants</span></th>
 						<td class="note">
 <?php if (isset($factoryBuilding['FactoryTenant']) && count($factoryBuilding['FactoryTenant']) > 0) { ?>
 <?php     $outputs = array(); ?>
@@ -176,14 +169,14 @@
 					</tr>
 				</table>
 
-				<div class="box_share">
+				<!-- <div class="box_share">
 					<dl class="clearfix">
 						<dt><img src="<?php echo $this->webroot; ?>common/images/search/btn_share.png" width="159" height="35" alt="この物件をシェアする" /></dt>
 						<dd>
 							<div class="fb-like" data-send="false" data-layout="button_count" data-width="120" data-show-faces="false"></div>
 						</dd>
 					</dl>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<div class="modal cpList">
@@ -203,7 +196,7 @@
 		<!-- /detail_read_detail -->
 
 		<!-- detail_article_feature/ -->
-		<h3 class="detail_hgroup"><img src="<?php echo $this->webroot; ?>common/images/search/detail_ttl_infla.png" width="134" height="18" alt="インフラ環境・施設" /></h3>
+		<h3 class="detail_hgroup">INFRASTRUCTURE ENVIRONMENT AND FACILITIES</h3>
 		<div class="detail_article_feature">
 			<ul class="clearfix">
 <?php foreach(Configure::read('Facility.FactoryBuilding') as $key => $val) { ?>
@@ -214,13 +207,13 @@
 <?php     } ?>
 <?php } ?>
 			</ul>
-			<table summary="インフラ環境・施設">
+			<table summary="Infrastructure environment and facilities">
 				<col width="15%" />
 				<col width="35%" />
 				<col width="15%" />
 				<col width="35%" />
 				<tr>
-					<th>幹線道路<span>Motorway</span></th>
+					<th><span>Motorway</span></th>
 					<td>
 <?php     if (isset($factoryBuilding['FactoryBuilding']['highway']) && !empty($factoryBuilding['FactoryBuilding']['highway'])) { ?>
 						<?php echo h($factoryBuilding['FactoryBuilding']['highway']); ?>
@@ -228,7 +221,7 @@
 						&nbsp;
 <?php     } ?>
 					</td>
-					<th>排水処理<span>Drainage Wate</span></th>
+					<th><span>Drainage Wate</span></th>
 					<td>
 <?php     if (isset($factoryBuilding['FactoryBuilding']['sewer']) && !empty($factoryBuilding['FactoryBuilding']['sewer'])) { ?>
 						<?php echo h($factoryBuilding['FactoryBuilding']['sewer']); ?>
@@ -238,7 +231,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th>工業用水<span>Industrial water</span></th>
+					<th><span>Industrial water</span></th>
 					<td>
 <?php     if (isset($factoryBuilding['FactoryBuilding']['waterworks']) && !empty($factoryBuilding['FactoryBuilding']['waterworks'])) { ?>
 						<?php echo h($factoryBuilding['FactoryBuilding']['waterworks']); ?>
@@ -246,7 +239,7 @@
 						&nbsp;
 <?php     } ?>
 					</td>
-					<th>雨水処理<span>Stormwater treatment</span></th>
+					<th><span>Stormwater treatment</span></th>
 					<td>
 <?php     if (isset($factoryBuilding['FactoryBuilding']['reservoir']) && !empty($factoryBuilding['FactoryBuilding']['reservoir'])) { ?>
 						<?php echo h($factoryBuilding['FactoryBuilding']['reservoir']); ?>
@@ -256,7 +249,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th>電力<span>Electric power</span></th>
+					<th><span>Electric power</span></th>
 					<td>
 <?php     if (isset($factoryBuilding['FactoryBuilding']['electricity']) && !empty($factoryBuilding['FactoryBuilding']['electricity'])) { ?>
 						<?php echo h($factoryBuilding['FactoryBuilding']['electricity']); ?>
@@ -264,7 +257,7 @@
 						&nbsp;
 <?php     } ?>
 					</td>
-					<th>天然ガス<span>Natural Gas</span></th>
+					<th><span>Natural Gas</span></th>
 					<td>
 <?php     if (isset($factoryBuilding['FactoryBuilding']['natural_gas']) && !empty($factoryBuilding['FactoryBuilding']['natural_gas'])) { ?>
 						<?php echo h($factoryBuilding['FactoryBuilding']['natural_gas']); ?>
@@ -282,7 +275,7 @@
 						&nbsp;
 <?php     } ?>
 					</td-->
-					<th>電話通信<span>TelepMhaonnay</span></th>
+					<th><span>TelepMhaonnay</span></th>
 					<td>
 <?php     if (isset($factoryBuilding['FactoryBuilding']['telephone']) && !empty($factoryBuilding['FactoryBuilding']['telephone'])) { ?>
 						<?php echo h($factoryBuilding['FactoryBuilding']['telephone']); ?>
@@ -290,7 +283,7 @@
 						&nbsp;
 <?php     } ?>
 					</td>
-					<th>セキュリティー<span>Security</span></th>
+					<th><span>Security</span></th>
 					<td>
 <?php     if (isset($factoryBuilding['FactoryBuilding']['security']) && !empty($factoryBuilding['FactoryBuilding']['security'])) { ?>
 						<?php echo h($factoryBuilding['FactoryBuilding']['security']); ?>
@@ -301,7 +294,7 @@
 				</tr>
 				<tr>
 
-					<th>管理費<span>Management Fee</span></th>
+					<th><span>Management Fee</span></th>
 					<td>
 <?php         if (isset($factoryBuilding['FactoryBuilding']['management_cost']) && !empty($factoryBuilding['FactoryBuilding']['management_cost'])) { ?>
 						<?php echo h(number_format($factoryBuilding['FactoryBuilding']['management_cost'], 1)); ?>&nbsp;USD/m&sup2;
@@ -309,7 +302,7 @@
 						&nbsp;
 <?php         } ?>
 					</td>
-					<th>その他付帯設備<span>Remarks</span></th>
+					<th><span>Remarks</span></th>
 					<td colspan="3">
 <?php     if (isset($factoryBuilding['FactoryBuilding']['facilities']) && !empty($factoryBuilding['FactoryBuilding']['facilities'])) { ?>
 						<?php echo nl2br(h($factoryBuilding['FactoryBuilding']['facilities'])); ?>
@@ -324,7 +317,7 @@
 		<!-- /detail_article_feature -->
 
 		<!-- detail_article_feature/ -->
-		<h3 class="detail_hgroup"><img src="<?php echo $this->webroot; ?>common/images/search/detail_ttl_distance.png" width="142" height="18" alt="主要地域までの距離" /></h3>
+		<h3 class="detail_hgroup">DISTANCE TO MAJOR AREAS</h3>
 		<div class="detail_article_feature">
 		<ul class="clearfix">
 		</ul>
@@ -342,33 +335,33 @@
 		
 		if ( !$find ) {
 			//南部
-			$disp1 = "ホーチミン市内<span>From Ho Chi Minh City</span>";
-			$disp2 = "タンソンニャット国際空港<span>From Tan Son Nhat International Airport</span>";
-			$disp3 = "ロンタン新国際空港（2020年完成予定）<span>Long Thanh International Airport</span>";
-			$disp4 = "サイゴン新港<span>From New Saigon Port</span>";
-			$disp5 = "カットライ<span>From Cat Lai Port</span>";
-			$disp6 = "チーパイ港<span>From Thi Vai Port </span>";
+			$disp1 = "<span>From Ho Chi Minh City</span>";
+			$disp2 = "<span>From Tan Son Nhat International Airport</span>";
+			$disp3 = "<span>Long Thanh International Airport</span>";
+			$disp4 = "<span>From New Saigon Port</span>";
+			$disp5 = "<span>From Cat Lai Port</span>";
+			$disp6 = "<span>From Thi Vai Port </span>";
 		} else {
 			if ( $key == "north" ) {
 				//北部
-				$disp1 = "ハノイ市中心部<span>From Ha Noi City</span>";
-				$disp2 = "ノイバイ国際空港<span>From Noi Bai International Airport</span>";
-				$disp3 = "ハイフォン港<span>From Haiphong Port</span>";
-				$disp4 = "カットビー国内空港<span>From Cat Bi Domestic Airport</span>";
-				$disp5 = "ティンラン国際空港<span>From Tien Lang International Airport</span>";
-				$disp6 = "カイラン港<span>From Cai Lan Port</span>";
+				$disp1 = "<span>From Ha Noi City</span>";
+				$disp2 = "<span>From Noi Bai International Airport</span>";
+				$disp3 = "<span>From Haiphong Port</span>";
+				$disp4 = "<span>From Cat Bi Domestic Airport</span>";
+				$disp5 = "<span>From Tien Lang International Airport</span>";
+				$disp6 = "<span>From Cai Lan Port</span>";
 			} else {
 				//中部
-				$disp1 = "ダナン市中心部<span>From Da Nang City</span>";
-				$disp2 = "ダナン国際空港<span>From Da Nang International Airport</span>";
-				$disp3 = "ティエンサ港<span>From Tien Sa Port</span>";
-				$disp4 = "リエンチュウ港<span>From Lien Chieu Port</span>";
-				$disp5 = "ロン橋<span>From Rong Bridge</span>";
+				$disp1 = "<span>From Da Nang City</span>";
+				$disp2 = "<span>From Da Nang International Airport</span>";
+				$disp3 = "<span>From Tien Sa Port</span>";
+				$disp4 = "<span>From Lien Chieu Port</span>";
+				$disp5 = "<span>From Rong Bridge</span>";
 				$disp6 = "";
 			}
 		}
 ?>
-			<table summary="主要地域までの距離">
+			<table summary="Distance to major areas">
 				<col width="20%" />
 				<col width="30%" />
 				<col width="20%" />
@@ -429,7 +422,7 @@
 				</tr>
 <?php if ( !$find ) { ?>
 				<tr>
-					<th>ブンタウ港<span>From Vung Tau Port</span></th>
+					<th><span>From Vung Tau Port</span></th>
 					<td>
 <?php if (isset($factoryBuilding['FactoryBuilding']['from_vungtau']) && !empty($factoryBuilding['FactoryBuilding']['from_vungtau'])) { ?>
 						<?php echo number_format(h(str_replace(',','',$factoryBuilding['FactoryBuilding']['from_vungtau']))); ?>km
@@ -488,15 +481,15 @@
 		<!-- /detail_photo:end -->
 
 		<div class="detail_photo_share clearfix">
-			<div class="box_share">
+			<!-- <div class="box_share">
 				<dl class="clearfix">
 					<dt><img src="<?php echo $this->webroot; ?>common/images/search/btn_share.png" width="159" height="35" alt="この物件をシェアする" /></dt>
 					<dd>
 						<div class="fb-like" data-send="false" data-layout="button_count" data-width="120" data-show-faces="false"></div>
 					</dd>
 				</dl>
-			</div>
-			<p class="imgbtn"><a href="mailto:?subject=TOKYO DEVELOPMENT CONSULTANT&amp;body=<?php echo $this->Html->url('', true); ?>"><img src="<?php echo $this->webroot; ?>common/images/search/btn_smartphone.png" width="270" height="37" alt="この物件の情報を携帯・スマホへ送る" /></a></p>
+			</div> -->
+			<!-- <p class="imgbtn"><a href="mailto:?subject=TOKYO DEVELOPMENT CONSULTANT&amp;body=<?php echo $this->Html->url('', true); ?>"><img src="<?php echo $this->webroot; ?>common/images/search/btn_smartphone.png" width="270" height="37" alt="この物件の情報を携帯・スマホへ送る" /></a></p> -->
 		</div>
 
 <?php $isProperty = false; ?>
@@ -510,10 +503,10 @@
 				<tr>
 					<!--thプロット</th>
 					<th>ユニット</th-->
-					<th>工場面積<br />(m&sup2)<span>Factory area</span></th>
-					<th>敷地面積<br />(m&sup2)<span>Land area</span></th>
-					<th>家賃<br />(USD)<span>Price</span></th>
-					<th>備考<span>Note</span></th>
+					<th><span>Factory area</span><br />(m&sup2)</th>
+					<th><span>Land area</span><br />(m&sup2)</th>
+					<th><span>Price</span><br />(USD)</th>
+					<th><span>Note</span></th>
 				</tr>
 <?php     foreach($factoryBuilding['FactoryProperty'][$subNum] as $factoryProperty) { ?>
 				<tr>
@@ -550,10 +543,10 @@
 				<tr>
 					<!--th>プロット</th>
 					<th>ユニット</th-->
-					<th>工場面積<br />(m&sup2)</th>
-					<th>敷地面積<br />(m&sup2)</th>
-					<th>家賃<br />(USD/月)</th>
-					<th>備考</th>
+					<th>Factory area<br />(m&sup2)</th>
+					<th>Land area<br />(m&sup2)</th>
+					<th>Price<br />(USD/月)</th>
+					<th>Note</th>
 				</tr>
 <?php     foreach($factoryBuilding['FactoryProperty'][$subNum] as $factoryProperty) { ?>
 				<tr>
@@ -590,10 +583,10 @@
 				<tr>
 					<!--th>プロット</th>
 					<th>ユニット</th-->
-					<th>工場面積<br />(m&sup2)</th>
-					<th>敷地面積<br />(m&sup2)</th>
-					<th>家賃<br />(USD)</th>
-					<th>備考</th>
+					<th>Factory area<br />(m&sup2)</th>
+					<th>Land area<br />(m&sup2)</th>
+					<th>Price<br />(USD)</th>
+					<th>Note</th>
 				</tr>
 <?php     foreach($factoryBuilding['FactoryProperty'][$subNum] as $factoryProperty) { ?>
 				<tr>
@@ -630,10 +623,10 @@
 				<tr>
 					<!--th>プロット</th>
 					<th>ユニット</th-->
-					<th>工場面積<br />(m&sup2)</th>
-					<th>敷地面積<br />(m&sup2)</th>
-					<th>家賃<br />(USD/月)</th>
-					<th>備考</th>
+					<th>Factory area<br />(m&sup2)</th>
+					<th>Land area<br />(m&sup2)</th>
+					<th>Price<br />(USD)</th>
+					<th>Note</th>
 				</tr>
 <?php     foreach($factoryBuilding['FactoryProperty'][$subNum] as $factoryProperty) { ?>
 				<tr>
@@ -664,16 +657,15 @@
 <?php if (isset($factoryBuilding['FactoryProperty'][$subNum]) && count($factoryBuilding['FactoryProperty'][$subNum])) { ?>
 <?php     $isProperty = true; ?>
 		<!-- detail_article_table/ -->
-		<h3 class="detail_hgroup"><img src="<?php echo $this->webroot; ?>common/images/search/detail_ttl_land.png" width="94" height="16" alt="売り土地" /></h3>
+		<h3 class="detail_hgroup">LEASE INDUSTRIAL SITE</h3>
 		<div class="detail_article_table factory imgbtn">
-			<table summary="売り土地">
+			<table summary="Lease industrial site">
 				<tr>
 					<!--th>プロット</th>
 					<th>ユニット</th-->
-					<th>敷地面積<br />(m&sup2)</th>
-					<!--th>敷地面積<br />(m&sup2)</th-->
-					<th>リース料金<br />(USD)</th>
-					<th>備考</th>
+					<th>Factory area<br />(m&sup2)</th>
+					<th>Price<br />(USD)</th>
+					<th>Note</th>
 				</tr>
 <?php     foreach($factoryBuilding['FactoryProperty'][$subNum] as $factoryProperty) { ?>
 				<tr>
@@ -701,7 +693,7 @@
 <?php } ?>
 <?php if ($isProperty) { ?>
 		<div class="detail_article_table imgbtn clearfix">
-			<p class="imgbtn"><a href="mailto:?subject=TOKYO DEVELOPMENT CONSULTANT&amp;body=<?php echo $this->Html->url('', true); ?>"><img src="<?php echo $this->webroot; ?>common/images/search/btn_smartphone.png" width="270" height="37" alt="この物件の情報を携帯・スマホへ送る" /></a></p>
+			<!-- <p class="imgbtn"><a href="mailto:?subject=TOKYO DEVELOPMENT CONSULTANT&amp;body=<?php echo $this->Html->url('', true); ?>"><img src="<?php echo $this->webroot; ?>common/images/search/btn_smartphone.png" width="270" height="37" alt="この物件の情報を携帯・スマホへ送る" /></a></p> -->
 		</div>
 <?php } ?>
 
