@@ -18,7 +18,7 @@
 		<!-- /search_header -->
 
 		<!-- search_list/ -->
-		<h3 class="search_list_ttl"><?php echo h($factoryArea['FactoryArea']['name']); ?>の物件一覧</h3>
+		<h3 class="search_list_ttl">Properties in <?php echo h($factoryArea['FactoryArea']['name']); ?></h3>
 
 		<!-- search_list_map_nav/ -->
 		<div id="map_canvas" class="search_list_map"></div>
@@ -44,17 +44,17 @@
 		<?php echo $this->Form->hidden('xml_url', array('id'=>'xml_url', 'value'=>$this->webroot . 'map/factory/')); ?>
 
 		<dl class="search_list_map_nav clearfix">
-			<dt><img src="<?php echo $this->webroot; ?>common/images/search/list_map_nav_ttl.png" width="68" height="46" alt="アイコン表示" /></dt>
+			<dt><span class="search_list_map_icon">Icon</span></dt>
 			<dd>
 				<ul class="clearfix">
 					<li class="search_list_map_nav_factory01">
-						<label for="list_map_nav01"><?php echo $this->Form->checkbox('list_map_nav01', array('value' => '1', 'class' => 'list_map_nav', 'checked' => true)); ?><img src="<?php echo $this->webroot; ?>common/images/search/list_map_nav_factory_txt01.png" width="49" height="29" alt="工業団地" /></label>
+						<label for="list_map_nav01"><?php echo $this->Form->checkbox('list_map_nav01', array('value' => '1', 'class' => 'list_map_nav', 'checked' => true)); ?>Industrial zone</label>
 					</li>
 					<li class="search_list_map_nav_factory02">
-						<label for="list_map_nav02"><?php echo $this->Form->checkbox('list_map_nav02', array('value' => '2', 'class' => 'list_map_nav', 'checked' => true)); ?><img src="<?php echo $this->webroot; ?>common/images/search/list_map_nav_factory_txt02.png" width="26" height="29" alt="工場" /></label>
+						<label for="list_map_nav02"><?php echo $this->Form->checkbox('list_map_nav02', array('value' => '2', 'class' => 'list_map_nav', 'checked' => true)); ?>Factory</label>
 					</li>
 					<li class="search_list_map_nav_factory03">
-						<label for="list_map_nav03"><?php echo $this->Form->checkbox('list_map_nav03', array('value' => '3', 'class' => 'list_map_nav', 'checked' => true)); ?><img src="<?php echo $this->webroot; ?>common/images/search/list_map_nav_factory_txt03.png" width="26" height="29" alt="倉庫" /></label>
+						<label for="list_map_nav03"><?php echo $this->Form->checkbox('list_map_nav03', array('value' => '3', 'class' => 'list_map_nav', 'checked' => true)); ?>Warehouse</label>
 					</li>
 				</ul>
 			</dd>
@@ -64,15 +64,15 @@
 		<?php echo $this->Form->create('FactoryBuilding', array('url' => '/factory/area/list/' . $factoryArea['FactoryArea']['id'], 'id' => 'U_FactoryBuildingAreaListForm')); ?>
 			<!-- search_nav/ -->
 			<div class="search_nav clearfix">
-				<h4 class="imgbtn"><img src="<?php echo $this->webroot; ?>common/images/search/search_nav_btn01.png" width="230" height="48" alt="条件を絞り込んで検索" /></h4>
+				<h4 class="imgbtn hover-red">FILTER</h4>
 				<div class="search_nav_detail">
 					<ul class="clearfix">
 						<li>
-							<img src="<?php echo $this->webroot; ?>common/images/search/search_nav_txt01.png" width="51" height="12" alt="並び替え" />
+							Sort
 							<?php echo $this->Form->select('sort', Configure::read('SearchList.Sort'), array('empty' => false, 'id' => 'U_FactoryBuildingSort')); ?>
 						</li>
 						<li>
-							<img src="<?php echo $this->webroot; ?>common/images/search/search_nav_txt02.png" width="52" height="12" alt="表示件数" />
+							Display results
 							<?php echo $this->Form->select('limit', Configure::read('SearchList.Limit'), array('empty' => false, 'id' => 'U_FactoryBuildingLimit')); ?>
 						</li>
 					</ul>
@@ -82,9 +82,9 @@
 
 			<!-- search_nav_table/ -->
 			<div class="search_nav_table">
-				<table summary="条件を絞り込んで検索">
+				<table summary="Refine search condition">
 					<tr>
-						<th>工業団地内外</th>
+						<th>Inside and outside the industrial park</th>
 						<td>
 							<ul class="search_nav_table_li1 clearfix">
 <?php foreach ($industrialParks as $value => $name) { ?>
@@ -93,71 +93,71 @@
 <?php         $checked = 'checked="checked"'; ?>
 <?php     } ?>
 								<li>
-									<label><input type="checkbox" id="U_FactoryBuildingIndustrialParkId<?php echo $value; ?>" name="data[FactoryBuilding][industrial_park_id][]" value="<?php echo $value; ?>" <?php echo $checked; ?> /><?php echo $name; ?></label>
+									<label class="d-flex align-items-start"><input type="checkbox" id="U_FactoryBuildingIndustrialParkId<?php echo $value; ?>" name="data[FactoryBuilding][industrial_park_id][]" value="<?php echo $value; ?>" <?php echo $checked; ?> /><?php echo $name; ?></label>
 								</li>
 <?php } ?>
 							</ul>
 						</td>
 					</tr>
 					<tr>
-						<th>物件タイプ</th>
+						<th>Property type</th>
 						<td>
 							<ul class="search_nav_table_li1 clearfix">
 <?php $checked = ''; ?>
 <?php if (empty($this->request->data['FactoryBuilding']['factory_sub_category_id'])) { ?>
 <?php     $checked = 'checked="checked"'; ?>
 <?php } ?>
-								<li><label><input type="radio" id="U_FactoryBuildingFactoryCategoryId0" name="data[FactoryBuilding][factory_sub_category_id]" value="" <?php echo $checked; ?> class="u_cat_types" />すべての物件タイプ</label></li>
+								<li><label class="d-flex align-items-start"><input type="radio" id="U_FactoryBuildingFactoryCategoryId0" name="data[FactoryBuilding][factory_sub_category_id]" value="" <?php echo $checked; ?> class="u_cat_types" />All property types</label></li>
 <?php $checked = ''; ?>
 <?php if (!empty($this->request->data['FactoryBuilding']['factory_sub_category_id']) && $this->request->data['FactoryBuilding']['factory_sub_category_id'] == '2,4') { ?>
 <?php     $checked = 'checked="checked"'; ?>
 <?php } ?>
-								<li><label><input type="radio" id="U_FactoryBuildingFactorySubCategoryId24" name="data[FactoryBuilding][factory_sub_category_id]" value="2,4" <?php echo $checked; ?> class="u_cat_types" />貸し工場/貸し倉庫</label></li>
+								<li><label class="d-flex align-items-start"><input type="radio" id="U_FactoryBuildingFactorySubCategoryId24" name="data[FactoryBuilding][factory_sub_category_id]" value="2,4" <?php echo $checked; ?> class="u_cat_types" />Rental factory / Lending warehouse</label></li>
 <?php $checked = ''; ?>
 <?php if (!empty($this->request->data['FactoryBuilding']['factory_sub_category_id']) && $this->request->data['FactoryBuilding']['factory_sub_category_id'] == '1,3') { ?>
 <?php     $checked = 'checked="checked"'; ?>
 <?php } ?>
-								<li><label><input type="radio" id="U_FactoryBuildingFactorySubCategoryId13" name="data[FactoryBuilding][factory_sub_category_id]" value="1,3" <?php echo $checked; ?> class="u_cat_types" />売り工場/売り倉庫</label></li>
+								<li><label class="d-flex align-items-start"><input type="radio" id="U_FactoryBuildingFactorySubCategoryId13" name="data[FactoryBuilding][factory_sub_category_id]" value="1,3" <?php echo $checked; ?> class="u_cat_types" />Selling factory / selling warehouse</label></li>
 <?php $checked = ''; ?>
 <?php if (!empty($this->request->data['FactoryBuilding']['factory_sub_category_id']) && $this->request->data['FactoryBuilding']['factory_sub_category_id'] == '5') { ?>
 <?php     $checked = 'checked="checked"'; ?>
 <?php } ?>
-								<li><label><input type="radio" id="U_FactoryBuildingFactorySubCategoryId5" name="data[FactoryBuilding][factory_sub_category_id]" value="5" <?php echo $checked; ?> class="u_cat_types" />売り土地</label></li>
+								<li><label class="d-flex align-items-start"><input type="radio" id="U_FactoryBuildingFactorySubCategoryId5" name="data[FactoryBuilding][factory_sub_category_id]" value="5" <?php echo $checked; ?> class="u_cat_types" />Selling land</label></li>
 							</ul>
 						</td>
 					</tr>
 					<tr class="u_switch disp_U_FactoryBuildingFactorySubCategoryId24">
-						<th>ご予算</th>
+						<th>Budget</th>
 						<td>
-							<?php echo $this->Form->select('price', Configure::read('Price.FactoryBuilding.2,4'), array('empty' => '選択してください', 'id' => 'U_FactoryBuildingPrice24')); ?>&nbsp;VND/ライ（1ライ=1600m&sup2;）
+							<?php echo $this->Form->select('price', Configure::read('Price.FactoryBuilding.2,4'), array('empty' => 'Please select', 'id' => 'U_FactoryBuildingPrice24')); ?>&nbsp;VND/1600m&sup2;
 						</td>
 					</tr>
 					<tr class="u_switch disp_U_FactoryBuildingFactorySubCategoryId13">
-						<th>ご予算</th>
+						<th>Budget</th>
 						<td>
-							<?php echo $this->Form->select('price', Configure::read('Price.FactoryBuilding.1,3'), array('empty' => '選択してください', 'id' => 'U_FactoryBuildingPrice13')); ?>&nbsp;VND
+							<?php echo $this->Form->select('price', Configure::read('Price.FactoryBuilding.1,3'), array('empty' => 'Please select', 'id' => 'U_FactoryBuildingPrice13')); ?>&nbsp;VND
 						</td>
 					</tr>
 					<tr class="u_switch disp_U_FactoryBuildingFactorySubCategoryId5">
-						<th>ご予算</th>
+						<th>Budget</th>
 						<td>
-							<?php echo $this->Form->select('price', Configure::read('Price.FactoryBuilding.5'), array('empty' => '選択してください', 'id' => 'U_FactoryBuildingPrice5')); ?>&nbsp;VND/m&sup2;
+							<?php echo $this->Form->select('price', Configure::read('Price.FactoryBuilding.5'), array('empty' => 'Please select', 'id' => 'U_FactoryBuildingPrice5')); ?>&nbsp;VND/m&sup2;
 						</td>
 					</tr>
 					<tr class="u_switch disp_U_FactoryBuildingFactorySubCategoryId24 disp_U_FactoryBuildingFactorySubCategoryId13">
-						<th>床面積</th>
+						<th>Area</th>
 						<td>
-							<?php echo $this->Form->select('floor_space', Configure::read('FloorSpace.FactoryBuilding.1,2,3,4'), array('empty' => '選択してください', 'id' => 'U_FactoryBuildingFloorSpace1234')); ?>&nbsp;m&sup2;
+							<?php echo $this->Form->select('floor_space', Configure::read('FloorSpace.FactoryBuilding.1,2,3,4'), array('empty' => 'Please select', 'id' => 'U_FactoryBuildingFloorSpace1234')); ?>&nbsp;m&sup2;
 						</td>
 					</tr>
 					<tr class="u_switch disp_U_FactoryBuildingFactorySubCategoryId5">
-						<th>敷地面積</th>
+						<th>Area</th>
 						<td>
-							<?php echo $this->Form->select('site_area', Configure::read('FloorSpace.FactoryBuilding.5'), array('empty' => '選択してください', 'id' => 'U_FactoryBuildingSiteArea5')); ?>&nbsp;ライ（1ライ=1600m&sup2;）
+							<?php echo $this->Form->select('site_area', Configure::read('FloorSpace.FactoryBuilding.5'), array('empty' => 'Please select', 'id' => 'U_FactoryBuildingSiteArea5')); ?>&nbsp;1600m&sup2;
 						</td>
 					</tr>
 					<tr>
-						<th>その他条件</th>
+						<th>Other conditions</th>
 						<td>
 							<ul class="search_nav_table_li3 clearfix">
 <?php foreach(Configure::read('Facility.FactoryBuilding') as $key => $val) { ?>
@@ -165,7 +165,7 @@
 <?php     if (isset($this->request->data['FactoryBuilding'][$key]) && $this->request->data['FactoryBuilding'][$key] == $key) { ?>
 <?php         $checked = 'checked="checked"'; ?>
 <?php     } ?>
-								<li><label><input type="checkbox" id="U_FactoryBuilding<?php echo $key; ?>" name="data[FactoryBuilding][<?php echo $key; ?>]" value="<?php echo $key; ?>" <?php echo $checked; ?> /><?php echo $val; ?></label></li>
+								<li><label class="d-flex align-items-start"><input type="checkbox" id="U_FactoryBuilding<?php echo $key; ?>" name="data[FactoryBuilding][<?php echo $key; ?>]" value="<?php echo $key; ?>" <?php echo $checked; ?> /><?php echo $val; ?></label></li>
 <?php } ?>
 							</ul>
 						</td>
@@ -235,32 +235,28 @@
 			<div class="search_column_section">
 				<ul class="clearfix first">
 <?php     if (isset($factoryBuilding['FactoryBuilding']['giz']) && !empty($factoryBuilding['FactoryBuilding']['giz'])) { ?>
-					<li><img src="<?php echo $this->webroot; ?>common/images/search/search_column_factory_giz.png" alt="一般加工区（GIZ）" /></li>
+					<li class="border-gray bk-gray">General Processing Zone (GIZ)</li>
 <?php     } ?>
 <?php     if (isset($factoryBuilding['FactoryBuilding']['epz']) && !empty($factoryBuilding['FactoryBuilding']['epz'])) { ?>
-					<li><img src="<?php echo $this->webroot; ?>common/images/search/search_column_factory_epz.png" alt="輸出加工区（EPZ）" /></li>
+					<li class="border-gray bk-gray">Output Processing Zone (EPZ)</li>
 <?php     } ?>
 <?php     if (isset($factoryBuilding['FactoryBuilding']['fz']) && !empty($factoryBuilding['FactoryBuilding']['fz'])) { ?>
-					<li><img src="<?php echo $this->webroot; ?>common/images/search/search_column_factory_fz.png" alt="フリーゾーン（FZ）" /></li>
+					<li class="border-gray bk-gray">Free zone (FZ)</li>
 <?php     } ?>
 					<li><img src="<?php echo $this->webroot; ?>common/images/search/search_column_factory_industrial<?php echo h($factoryBuilding['FactoryBuilding']['industrial_park_id']); ?>.png" alt="工業団地" /></li>
 				</ul>
-				<table summary="物件詳細">
+				<table summary="Property Details">
 					<col width="110">
 					<col width="">
-					<!--tr>
-						<th>BOIゾーン<span>BOI zone</span></th>
-						<td><?php echo h(Configure::read('BoiZone.' . $factoryBuilding['FactoryBuilding']['boi_zone'])); ?></td>
-					</tr-->
 					<tr>
-						<th>エリア<span>Area</span></th>
+						<th><span>Area</span></th>
 						<td><?php echo h($factoryArea['FactoryArea']['name']); ?></td>
 					</tr>
 					<tr>
-						<th>完成年<span>Completion year</span></th>
+						<th><span>Completion year</span></th>
 						<td>
 <?php     if (isset($factoryBuilding['FactoryBuilding']['complated']) && !empty($factoryBuilding['FactoryBuilding']['complated'])) { ?>
-							<?php echo h($factoryBuilding['FactoryBuilding']['complated']); ?>年
+							<?php echo h($factoryBuilding['FactoryBuilding']['complated']); ?>
 <?php     } else { ?>
 							&nbsp;
 <?php     } ?>
@@ -277,7 +273,7 @@
 
 <?php     } ?>
 				</ul>
-				<p class="imgbtn"><a href="<?php echo $this->webroot; ?>factory/area/detail/<?php echo h($factoryBuilding['FactoryBuilding']['id']); ?>"><img src="<?php echo $this->webroot; ?>common/images/search/search_column_btn01.png" width="180" height="30" alt="物件の詳細を見る" /></a></p>
+				<p class="imgbtn"><a class="button-red hover-dark" href="<?php echo $this->webroot; ?>factory/area/detail/<?php echo h($factoryBuilding['FactoryBuilding']['id']); ?>">Details of the property</a></p>
 			</div>
 		</div>
 <?php } ?>
@@ -291,15 +287,15 @@
 		<?php echo $this->Form->create('FactoryBuilding', array('url' => '/factory/area/list/' . $factoryArea['FactoryArea']['id'], 'id' => 'B_FactoryBuildingAreaListForm')); ?>
 			<!-- search_nav/ -->
 			<div class="search_nav clearfix">
-				<h4 class="imgbtn"><img src="<?php echo $this->webroot; ?>common/images/search/search_nav_btn01.png" width="230" height="48" alt="条件を絞り込んで検索" /></h4>
+				<h4 class="imgbtn hover-red">FILTER</h4>
 				<div class="search_nav_detail">
 					<ul class="clearfix">
 						<li>
-							<img src="<?php echo $this->webroot; ?>common/images/search/search_nav_txt01.png" width="51" height="12" alt="並び替え" />
+							Sort by
 							<?php echo $this->Form->select('sort', Configure::read('SearchList.Sort'), array('empty' => false, 'id' => 'B_FactoryBuildingSort')); ?>
 						</li>
 						<li>
-							<img src="<?php echo $this->webroot; ?>common/images/search/search_nav_txt02.png" width="52" height="12" alt="表示件数" />
+							Display results
 							<?php echo $this->Form->select('limit', Configure::read('SearchList.Limit'), array('empty' => false, 'id' => 'B_FactoryBuildingLimit')); ?>
 						</li>
 					</ul>
@@ -309,9 +305,9 @@
 
 			<!-- search_nav_table/ -->
 			<div class="search_nav_table">
-				<table summary="条件を絞り込んで検索">
+				<table summary="Refine search condition">
 					<tr>
-						<th>工業団地内外</th>
+						<th>Inside and outside the industrial park</th>
 						<td>
 							<ul class="search_nav_table_li1 clearfix">
 <?php foreach ($industrialParks as $value => $name) { ?>
@@ -320,71 +316,71 @@
 <?php         $checked = 'checked="checked"'; ?>
 <?php     } ?>
 								<li>
-									<label><input type="checkbox" id="B_FactoryBuildingIndustrialParkId<?php echo $value; ?>" name="data[FactoryBuilding][industrial_park_id][]" value="<?php echo $value; ?>" <?php echo $checked; ?> /><?php echo $name; ?></label>
+									<label class="d-flex align-items-start"><input type="checkbox" id="B_FactoryBuildingIndustrialParkId<?php echo $value; ?>" name="data[FactoryBuilding][industrial_park_id][]" value="<?php echo $value; ?>" <?php echo $checked; ?> /><?php echo $name; ?></label>
 								</li>
 <?php } ?>
 							</ul>
 						</td>
 					</tr>
 					<tr>
-						<th>物件タイプ</th>
+						<th>Property type</th>
 						<td>
 							<ul class="search_nav_table_li1 clearfix">
 <?php $checked = ''; ?>
 <?php if (empty($this->request->data['FactoryBuilding']['factory_sub_category_id'])) { ?>
 <?php     $checked = 'checked="checked"'; ?>
 <?php } ?>
-								<li><label><input type="radio" id="B_FactoryBuildingFactoryCategoryId0" name="data[FactoryBuilding][factory_sub_category_id]" value="" <?php echo $checked; ?> class="b_cat_types" />すべての物件タイプ</label></li>
+								<li><label class="d-flex align-items-start"><input type="radio" id="B_FactoryBuildingFactoryCategoryId0" name="data[FactoryBuilding][factory_sub_category_id]" value="" <?php echo $checked; ?> class="b_cat_types" />All property types</label></li>
 <?php $checked = ''; ?>
 <?php if (!empty($this->request->data['FactoryBuilding']['factory_sub_category_id']) && $this->request->data['FactoryBuilding']['factory_sub_category_id'] == '2,4') { ?>
 <?php     $checked = 'checked="checked"'; ?>
 <?php } ?>
-								<li><label><input type="radio" id="B_FactoryBuildingFactorySubCategoryId24" name="data[FactoryBuilding][factory_sub_category_id]" value="2,4" <?php echo $checked; ?> class="b_cat_types" />貸し工場/貸し倉庫</label></li>
+								<li><label class="d-flex align-items-start"><input type="radio" id="B_FactoryBuildingFactorySubCategoryId24" name="data[FactoryBuilding][factory_sub_category_id]" value="2,4" <?php echo $checked; ?> class="b_cat_types" />Rental factory / Lending warehouse</label></li>
 <?php $checked = ''; ?>
 <?php if (!empty($this->request->data['FactoryBuilding']['factory_sub_category_id']) && $this->request->data['FactoryBuilding']['factory_sub_category_id'] == '1,3') { ?>
 <?php     $checked = 'checked="checked"'; ?>
 <?php } ?>
-								<li><label><input type="radio" id="B_FactoryBuildingFactorySubCategoryId13" name="data[FactoryBuilding][factory_sub_category_id]" value="1,3" <?php echo $checked; ?> class="b_cat_types" />売り工場/売り倉庫</label></li>
+								<li><label class="d-flex align-items-start"><input type="radio" id="B_FactoryBuildingFactorySubCategoryId13" name="data[FactoryBuilding][factory_sub_category_id]" value="1,3" <?php echo $checked; ?> class="b_cat_types" />Selling factory / selling warehouse</label></li>
 <?php $checked = ''; ?>
 <?php if (!empty($this->request->data['FactoryBuilding']['factory_sub_category_id']) && $this->request->data['FactoryBuilding']['factory_sub_category_id'] == '5') { ?>
 <?php     $checked = 'checked="checked"'; ?>
 <?php } ?>
-								<li><label><input type="radio" id="B_FactoryBuildingFactorySubCategoryId5" name="data[FactoryBuilding][factory_sub_category_id]" value="5" <?php echo $checked; ?> class="b_cat_types" />売り土地</label></li>
+								<li><label class="d-flex align-items-start"><input type="radio" id="B_FactoryBuildingFactorySubCategoryId5" name="data[FactoryBuilding][factory_sub_category_id]" value="5" <?php echo $checked; ?> class="b_cat_types" />Selling land</label></li>
 							</ul>
 						</td>
 					</tr>
 					<tr class="b_switch disp_B_FactoryBuildingFactorySubCategoryId24">
-						<th>ご予算</th>
+						<th>Budget</th>
 						<td>
-							<?php echo $this->Form->select('price', Configure::read('Price.FactoryBuilding.2,4'), array('empty' => '選択してください', 'id' => 'B_FactoryBuildingPrice24')); ?>&nbsp;VND/m&sup2;
+							<?php echo $this->Form->select('price', Configure::read('Price.FactoryBuilding.2,4'), array('empty' => 'Please select', 'id' => 'B_FactoryBuildingPrice24')); ?>&nbsp;VND/m&sup2;
 						</td>
 					</tr>
 					<tr class="b_switch disp_B_FactoryBuildingFactorySubCategoryId13">
-						<th>ご予算</th>
+						<th>Budget</th>
 						<td>
-							<?php echo $this->Form->select('price', Configure::read('Price.FactoryBuilding.1,3'), array('empty' => '選択してください', 'id' => 'B_FactoryBuildingPrice13')); ?>&nbsp;VND
+							<?php echo $this->Form->select('price', Configure::read('Price.FactoryBuilding.1,3'), array('empty' => 'Please select', 'id' => 'B_FactoryBuildingPrice13')); ?>&nbsp;VND
 						</td>
 					</tr>
 					<tr class="b_switch disp_B_FactoryBuildingFactorySubCategoryId5">
-						<th>ご予算</th>
+						<th>Budget</th>
 						<td>
-							<?php echo $this->Form->select('price', Configure::read('Price.FactoryBuilding.5'), array('empty' => '選択してください', 'id' => 'B_FactoryBuildingPrice5')); ?>&nbsp;VND
+							<?php echo $this->Form->select('price', Configure::read('Price.FactoryBuilding.5'), array('empty' => 'Please select', 'id' => 'B_FactoryBuildingPrice5')); ?>&nbsp;VND
 						</td>
 					</tr>
 					<tr class="b_switch disp_B_FactoryBuildingFactorySubCategoryId24 disp_B_FactoryBuildingFactorySubCategoryId13">
-						<th>床面積</th>
+						<th>Floor space</th>
 						<td>
-							<?php echo $this->Form->select('floor_space', Configure::read('FloorSpace.FactoryBuilding.1,2,3,4'), array('empty' => '選択してください', 'id' => 'B_FactoryBuildingFloorSpace1234')); ?>&nbsp;m&sup2;
+							<?php echo $this->Form->select('floor_space', Configure::read('FloorSpace.FactoryBuilding.1,2,3,4'), array('empty' => 'Please select', 'id' => 'B_FactoryBuildingFloorSpace1234')); ?>&nbsp;m&sup2;
 						</td>
 					</tr>
 					<tr class="b_switch disp_B_FactoryBuildingFactorySubCategoryId5">
-						<th>敷地面積</th>
+						<th>Area</th>
 						<td>
-							<?php echo $this->Form->select('site_area', Configure::read('FloorSpace.FactoryBuilding.5'), array('empty' => '選択してください', 'id' => 'B_FactoryBuildingSiteArea5')); ?>&nbsp;ライ
+							<?php echo $this->Form->select('site_area', Configure::read('FloorSpace.FactoryBuilding.5'), array('empty' => 'Please select', 'id' => 'B_FactoryBuildingSiteArea5')); ?>&nbsp;x&nbsp;1600m&sup2;
 						</td>
 					</tr>
 					<tr>
-						<th>その他条件</th>
+						<th>Other conditions</th>
 						<td>
 							<ul class="search_nav_table_li3 clearfix">
 <?php foreach(Configure::read('Facility.FactoryBuilding') as $key => $val) { ?>
@@ -392,7 +388,7 @@
 <?php     if (isset($this->request->data['FactoryBuilding'][$key]) && $this->request->data['FactoryBuilding'][$key] == $key) { ?>
 <?php         $checked = 'checked="checked"'; ?>
 <?php     } ?>
-								<li><label><input type="checkbox" id="B_FactoryBuilding<?php echo $key; ?>" name="data[FactoryBuilding][<?php echo $key; ?>]" value="<?php echo $key; ?>" <?php echo $checked; ?> /><?php echo $val; ?></label></li>
+								<li><label class="d-flex align-items-start"><input type="checkbox" id="B_FactoryBuilding<?php echo $key; ?>" name="data[FactoryBuilding][<?php echo $key; ?>]" value="<?php echo $key; ?>" <?php echo $checked; ?> /><?php echo $val; ?></label></li>
 <?php } ?>
 							</ul>
 						</td>

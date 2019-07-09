@@ -15,8 +15,8 @@
 /* link */
 a:link {color:#000; text-decoration:none;}
 a:visited {color:#000; text-decoration:none;}
-a:hover {color:#666; text-decoration:underline;}
-a:active {color:#c00; text-decoration:underline;}
+a:hover {color:#666; text-decoration:none;}
+a:active {color:#c00; text-decoration:none;}
 
 /* link_detail */
 .search_nav_table label:hover {color:#666; text-decoration:none;}
@@ -949,4 +949,51 @@ li.contents_fontmenu_nav03 a {
 
 .search-title:after {
 	content: "SEARCH BY INDUSTRIAL PARK";
+}
+
+.search_list_map_nav .search_list_map_icon {
+	width: 68px;
+	height: 46px;
+	background: #000;
+	display: block;
+	color: #fff;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 40px;
+	font-size: 18px;
+}
+
+.border-gray {
+	border: 1px solid #a4a2a2;
+	padding: 1px;
+}
+
+.bk-gray {
+	background: #e9e4e4;
+}
+
+.button-red {
+	background-color: #c00;
+	border-radius: 5px;
+	border: none;
+	color: #fff !important;
+	padding: 15px;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.hover-dark:hover {
+	background: #000;
+}
+
+.hover-red:hover {
+	background: #d50101;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.align-items-start {
+	align-items: flex-start;
 }
