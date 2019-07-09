@@ -20,8 +20,8 @@
 	<script type="text/javascript" src="../common/js/jquery.jscrollpane.min.js"></script>
 	<script type="text/javascript" src="../common/js/styleswitcher.js"></script>
 	<script type="text/javascript" src="../common/js/global.js"></script>
-	<script src="http://maps.google.com/maps/api/js?key=AIzaSyDRe-SLe-oVJhmp1x0wDGUdtVOmFceE8eU&v=quarterly&v=3"></script>
-	<title>会社情報｜東京デベロップメントコンサルタント</title>
+	<script src="https://maps.google.com/maps/api/js?key=AIzaSyDRe-SLe-oVJhmp1x0wDGUdtVOmFceE8eU&v=quarterly&v=3"></script>
+	<title>Company Information | Factory Vietnam</title>
 	<script type="text/javascript" src="../common/js/ga.js"></script>
 </head>
 <body>
@@ -37,86 +37,78 @@
 <!-- topicpath/ -->
 <ul id="topicpath">
 	<li class="home"><a href="/">TOP</a></li>
-	<li>会社情報</li>
+	<li>About us</li>
 </ul>
 <!-- /topicpath -->
 
 <div id="companyCnt" class="main">
-<h1 class="header_hgroup"><img src="images/header_ttl.png" alt="会社情報" width="730" height="40" /></h1>
+<h1 class="header_hgroup">ABOUT US</h1>
 
-<h2 class="ttl_hgroup"><img src="images/ttl01.png" alt="会社概要" width="98" height="23" /></h2>
+<h2 class="ttl_hgroup">Company Profile</h2>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<th scope="row">社名</th>
-<td>Tokyo Development Consultants（Vietnam）Co.,Ltd.</td>
-</tr>
-<tr>
-<th scope="row">代表取締役</th>
-<td>佐藤　仁司</td>
-</tr>
-<tr>
-<th scope="row">資本金</th>
-<td>30,000ドル</td>
-</tr>
-<tr>
-<th scope="row">設立</th>
-<td>2007年11月21日</td>
-</tr>
-<tr>
-<th scope="row">住所</th>
+<th>Description</th>
 <td>
-602/43 Dien Bien Phu, Ward 22, Binh Thanh District,<br>
-Ho Chi Minh City.
+<ul class="list clearfix">
+<li>Factory-vn.com is operated by FACT-LINK MARKETPLACE CO.,LTD which is established and managed by Japanese with the aim of supporting manufacturers in Vietnam. Having more than 10 years experience in Vietnam since establishment of 2007, we have wide range of factory options and reliable networks. </li>
+<li>The aim of factory-vn,com is provide the service that manufacturers who are going to establish factory in Vietnam can search and find suitable property such as factory, industrial park and warehouse. We will provide free options based on manufacturers's requirement such as location, area, purpose and the starting time of the factory.  On our website , we list most of the major industrial zone in Vietnam with full information of location, management, equipments.</li>
+<li>Besides factory-vn.com, FACT-LINK MARKETPLACE CO.,LTD operates Fact-link.com.vn which is the business directory in Vietnam where the manufacturers can search their potential customers or suppliers in Vietnam and fact-depot.com where the manufacturers can search and buy MRO products in Vietnam with quick delivery throughout Vietnam.</li>
+</ul>
 </td>
 </tr>
 <tr>
-<th scope="row">電話番号</th>
+<th scope="row">Company name</th>
+<td>FACT-LINK MARKETPLACE CO.,LTD</td>
+</tr>
+<tr>
+<th scope="row">Director</th>
+<td>Yukiko Yazumi (Ms.)</td>
+</tr>
+<tr>
+<th scope="row">Establish</th>
+<td>21st November 2007</td>
+</tr>
+<tr>
+<th scope="row">Address</th>
+<td>
+602/43 Dien Bien Phu, Ward 22, Binh Thanh District,<br>
+Ho Chi Minh City, Vietnam.
+</td>
+</tr>
+<tr>
+<th scope="row">Phone</th>
 <td>
 (＋84)-8-8876-7138
 </td>
-</tr>
 <tr>
-<th scope="row">FAX</th>
-<td>(＋84)-8-3910-5208</td>
-</tr>
-<tr>
-<th scope="row">事業内容</th>
+<th scope="row">Business Description</th>
 <td>
 <dl>
-<dt>不動産部事業部</dt>
+<dt>Real estate brokerage</dt>
 <dd class="mb10">
 <ul class="list clearfix">
-<li>アパート マンション コンドミニアム</li>
-<li>事務所 店舗 ショールーム</li>
-<li>貸し工場 倉庫</li>
-<li>事務所用地の賃貸仲介</li>
-<li>土地 工業団地</li>
-<li>等の仲介業務及び管理業務</li>
+<li>Operating factory-vn.com and providing information of factories, industrial park and warehouses in Vietnam for manufacturers.
+</li>
 </ul>
 </dd>
 
-<dt>FACT-LINK事業部</dt>
+<dt>MRO E-commerse</dt>
 <dd class="mb10">
 <ul class="list clearfix">
-<li>ベトナム製造業ポータルサイトの運営</li>
-<li>ビジネスマッチング</li>
-<li>新規進出企業向け総合コンサルティング</li>
+<li>Operating fact-depot.com and selling more than 30,000 industrial products online and deliver throughout Vietnam.</li>
 </ul>
 </dd>
 
-<dt>貿易事業部</dt>
+<dt>Business directory of manufacturers</dt>
 <dd>
 <ul class="list clearfix">
-<li>工業用洗浄システム（洗浄装置、洗浄液）の販売</li>
-<li>各種工業用化学薬品の販売</li>
-<li>土木建築用資材の輸出入販売</li>
-<li>工業用化学薬品を中心とした輸出入業務</li>
+<li>Operating fact-link.com.vn, with more than 3,000 manufacturers in Vietnam, and managing the directory where manufactures can find potential customers and suppliers.</li>
 </ul>
 </dd>
 </dl>
 </td>
 </tr>
-<tr>
+<!-- <tr>
 <th scope="row">関連提携会社</th>
 <td>
 <ul class="list clearfix">
@@ -126,10 +118,10 @@ Ho Chi Minh City.
 <li>テレコムスクエアー</li>
 </ul>
 </td>
-</tr>
+</tr> -->
 </table>
 <!-- 13.723059, 100.569775 -->
-<h2 id="access" class="ttl_hgroup"><img src="images/ttl02.png" alt="アクセス" width="92" height="21" /></h2>
+<h2 id="access" class="ttl_hgroup">Map</h2>
 <div id="access-map" style="height:410px; width:730px;"></div>
 
 <!-- contents_inquiry/ -->
@@ -142,7 +134,6 @@ Ho Chi Minh City.
 //<![CDATA[
 
 function initializeAccessMap () {
-	//var center = new google.maps.LatLng(10.782547, 106.705761);
 	var center = new google.maps.LatLng(10.797333, 106.717426);
 	var options = {
 		zoom: 16,
@@ -164,7 +155,7 @@ function initializeAccessMap () {
 	});
 
 	var content = '<div id="infoWindow" style="width:250px;height:130px;">' +
-	'<h1 style="font-weight:bold;">Tokyo Development Consultants（Vietnam）Co.,Ltd.</h1>' +
+	'<h1 style="font-weight:bold;">FACTORY VIETNAM</h1>' +
 	'<p style="margin-top:10px;">602/43 Dien Bien Phu, Ward 22, Binh Thanh District, Ho Chi Minh City</p>' +
 	'</div>';
 	var infowindow = new google.maps.InfoWindow({

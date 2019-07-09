@@ -15,6 +15,9 @@
 	margin:30px 0;
 	padding:8px 15px;
 	background-color:#191919;
+	font-size: 16px;
+	color: #fff;
+	font-weight: bold;
 }
 .ttl_hgroup span {
 	display: block;
