@@ -19,7 +19,7 @@ class ContactFactory extends AppModel {
 		'company_name' => array(
             array(
                 'rule'     => array('inpStringCheck','@'),
-                'message'  => '会社名を正しく入力してください。',
+                'message'  => 'Please enter your company name correctly.',
             ),
 		),
 		// 'industry' => array(
@@ -31,13 +31,13 @@ class ContactFactory extends AppModel {
 		'name' => array(
 			'notempty' => array(
 				'rule'     => array('notempty'),
-				'message'  => 'お名前は省略できません。',
+				'message'  => 'Your name not empty',
 				'required' => true,
 				'last'     => true,
 			),
             array(
                 'rule'     => array('inpStringCheck','@'),
-                'message'  => 'お名前を正しく入力してください。',
+                'message'  => 'Please enter your name correctly.',
             ),
 		),
 		// 'address' => array(
@@ -49,13 +49,13 @@ class ContactFactory extends AppModel {
 		'tel' => array(
 			'notempty' => array(
 				'rule'     => array('notempty'),
-				'message'  => '電話番号は省略できません。',
+				'message'  => 'Phone number not empty',
 				'required' => true,
 				'last'     => true,
 			),
             array(
                 'rule'     => array('inpStringCheck','@'),
-                'message'  => '電話番号を正しく入力してください。',
+                'message'  => 'Please enter your phone number correctly.',
             ),
 		),
 		// 'fax' => array(
@@ -105,26 +105,26 @@ class ContactFactory extends AppModel {
 		'message' => array(
 			'notempty' => array(
 				'rule'     => array('notempty'),
-				'message'  => 'お問い合わせ内容',
+				'message'  => 'Content of inquiry',
 				'required' => true,
 				'last'     => true,
 			),
             array(
                 'rule'     => array('inpStringCheck','@'),
-                'message'  => 'お問い合わせ内容',
+                'message'  => 'Content of inquiry',
             ),
 		),
 		'email' => array(
 			'notempty' => array(
 				'rule'     => array('notempty'),
-				'message'  => 'E-mailは省略できません。',
+				'message'  => 'E-mail not empty',
 				'required' => true,
 				'last'     => true,
 			),
 			'emailvalue' => array(
 				//'rule' => array('custom', '/^(.*)@(.*)\.(.*)$/i'),
 				'rule' => array('custom', "/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/"),
-				'message' => 'E-mailを正しく入力してください。',
+				'message' => 'Please enter E-mail correctly.',
 				'required' => true,
 				'allowEmpty' => true,
 				'last' => true,

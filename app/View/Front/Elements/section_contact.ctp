@@ -26,7 +26,7 @@
 <div id="contactCnt">
 
 <h3 class="contact_title">Inquiry form</h3>
-<p>Please send inquiry by this form. <br>Based on your requirements such as location, area, purpose and when your business will start operation etc, we will provide options for you for free! </p>
+<p class="f-14">Please send inquiry by this form. <br>Based on your requirements such as location, area, purpose and when your business will start operation etc, we will provide options for you for free! </p>
 <div class="errorTxt">
 <?php $err = isset($validErrors['ContactFactory']['company_name'][0]); ?>
 <?php if ($err) { ?>

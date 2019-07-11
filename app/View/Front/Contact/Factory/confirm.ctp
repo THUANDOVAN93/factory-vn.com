@@ -1,87 +1,43 @@
 		<!-- topicpath/ -->
 		<ul id="topicpath">
 			<li class="home"><a href="<?php echo $this->webroot; ?>">TOP</a></li>
-			<li>お問い合わせ</li>
+			<li>Contact</li>
 		</ul>
 		<!-- /topicpath -->
 		
 		<div id="contactCnt">
 			<h2><img src="<?php echo $this->webroot; ?>common/images/contact/header_ttl.png" width="730" height="40" alt="お問い合わせ" /></h2>
-			<p>入力内容をご確認の上、お間違いなければ「送信」ボタンをクリックしてください。</p>
+			<p>Please confirm your entry and if you make a mistake, click on the "send" button.</p>
 
 				<table border="0" cellspacing="0" cellpadding="0" summary="お問い合せフォーム">
 					<col width="25%" />
 					<col width="" />
 					<tr>
-						<th scope="row">お名前 / Name</th>
+						<th scope="row">Name</th>
 						<td>
 							<?php echo h($contact['name']); ?>
 						</td>
 					</tr>
 					<tr>
-						<th scope="row">電話番号 / Phone number</th>
+						<th scope="row">Phone number</th>
 						<td>
 							<?php echo h($contact['tel']); ?>
 						</td>
 					</tr>
 					<tr>
-						<th scope="row">会社名 / Company</th>
+						<th scope="row">Company</th>
 						<td>
 							<?php echo h($contact['company_name']); ?>
 						</td>
 					</tr>
 					<tr>
-						<th scope="row">メールアドレス / Mail address</th>
+						<th scope="row">Mail address</th>
 						<td>
 							<?php echo h($contact['email1']); ?>@<?php echo h($contact['email2']); ?>
 						</td>
 					</tr>
-<?php if (isset($contact['factory_sub_category']) && $contact['factory_sub_category'] == "5") { ?>
-							<ul>
-								<li>
-									<?php if (isset($contact['factory_sub_category'])) { echo h($factorySubCategories[$contact['factory_sub_category']]); } ?>
-								</li>
-							</ul>
-							<table border="0" cellspacing="0" cellpadding="0">
-								<tr>
-									<th scope="row">必要面積</th>
-									<td>
-										<?php echo h($contact['floor_space_site']); ?>
-									</td>
-								</tr>
-							</table>
-<?php } ?>
-<?php if (isset($contact['factory_sub_category']) && $contact['factory_sub_category'] != "5" && strlen($contact['factory_sub_category']) > 0) { ?>
-							<ul>
-								<li>
-									<?php if (isset($contact['factory_sub_category'])) { echo h($factorySubCategories[$contact['factory_sub_category']]); } ?>
-								</li>
-							</ul>
-							<table border="0" cellspacing="0" cellpadding="0">
-								<tr>
-									<th scope="row">必要面積</th>
-									<td>
-										<?php echo h($contact['floor_space_building']); ?>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row">床耐荷重</th>
-									<td>
-										<?php echo h($contact['weight_limit']); ?>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row">天井高</th>
-									<td>
-										<?php echo h($contact['building_height']); ?>
-									</td>
-								</tr>
-							</table>
-<?php } ?>
-						</td>
-					</tr> -->
 					<tr>
-						<th scope="row">お問い合わせ内容 / Inquiry</th>
+						<th scope="row">Inquiry</th>
 						<td>
 							<?php echo nl2br(h($contact['message'])); ?>
 						</td>
@@ -89,8 +45,8 @@
 				</table>
 				<div id="btn">
 					<ul class="clearfix">
-						<li class="fl"><a id="submit" onclick="$('#form').submit(); return false;">送信</a></li>
-						<li class="fr"><a id="back" onclick="$('#form_back').submit(); return false;">入力画面に戻る</a></li>
+						<li class="fl"><a id="submit" onclick="$('#form').submit(); return false;">Send</a></li>
+						<li class="fr"><a id="back" onclick="$('#form_back').submit(); return false;">Returns to the input screen</a></li>
 					</ul>
 				</div>
 			<?php echo $this->Form->create('ContactFactory', array('id' => 'form', 'url' => '/contact/factory/complete')); ?>

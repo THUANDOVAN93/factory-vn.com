@@ -219,12 +219,12 @@ class FrontFactoryController extends FrontController {
             $this->Session->write('FrontFactoryController.ListSearchValue', $listSearchValue);
         }
 
-        //検索条件の取得
+        //Acquisition of search condition
         $params = $this->FactoryBuilding->frontListSearchConditions($listSearchValue);
         $this->paginate = $params;
         $this->set('factoryBuildings', $this->paginate());
 
-        //検索条件の初期値を設定
+        //Set initial value of search condition
         if (!isset($this->request->data['FactoryBuilding']['limit'])) {
             $this->request->data['FactoryBuilding']['limit'] = '10';
         }

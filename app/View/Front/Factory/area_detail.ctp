@@ -82,15 +82,27 @@
 			<div class="detail_read_section clearfix">
 				<ul class="clearfix areaIcon">
 <?php     if (isset($factoryBuilding['FactoryBuilding']['giz']) && !empty($factoryBuilding['FactoryBuilding']['giz'])) { ?>
-					<li style="padding: 2px;" class="border-gray bk-gray">General Processing Zone (GIZ)</li>
+					<li class="border-gray bk-gray p-y-10">General Processing Zone (GIZ)</li>
 <?php     } ?>
 <?php     if (isset($factoryBuilding['FactoryBuilding']['epz']) && !empty($factoryBuilding['FactoryBuilding']['epz'])) { ?>
-					<li style="padding: 2px;" class="border-gray bk-gray">Output Processing Zone (EPZ)</li>
+					<li class="border-gray bk-gray p-y-10">Output Processing Zone (EPZ)</li>
 <?php     } ?>
 <?php     if (isset($factoryBuilding['FactoryBuilding']['fz']) && !empty($factoryBuilding['FactoryBuilding']['fz'])) { ?>
-					<li style="padding: 2px;" class="border-gray bk-gray">Free zone (FZ)</li>
+
+					 <li class="border-gray bk-gray p-y-10">Free zone (FZ)</li>
 <?php     } ?>
-					<li><img src="<?php echo $this->webroot; ?>common/images/search/search_column_factory_industrial<?php echo h($factoryBuilding['FactoryBuilding']['industrial_park_id']); ?>.png" alt="工業団地" /></li>
+					
+					<?php if ($factoryBuilding['FactoryBuilding']['industrial_park_id'] == 1) { ?>
+					<li class="border-gray bk-gray p-y-10">Industrial park</li>
+					<?php } ?>
+
+					<?php if ($factoryBuilding['FactoryBuilding']['industrial_park_id'] == 2) { ?>
+					<li class="border-gray bk-gray p-y-10">Industrial park (EAT not approved)</li>
+					<?php } ?>
+
+					<?php if ($factoryBuilding['FactoryBuilding']['industrial_park_id'] == 3) { ?>
+					<li class="border-gray bk-gray p-y-10">Outside Industrial park</li>
+					<?php } ?>
 				</ul>
 				<table summary="物件詳細">
 					<col width="36%" />
@@ -198,13 +210,20 @@
 		<!-- detail_article_feature/ -->
 		<h3 class="detail_hgroup">INFRASTRUCTURE ENVIRONMENT AND FACILITIES</h3>
 		<div class="detail_article_feature">
-			<ul class="clearfix">
+			<ul class="clearfix search_column_type">
 <?php foreach(Configure::read('Facility.FactoryBuilding') as $key => $val) { ?>
-<?php     if ($factoryBuilding['FactoryBuilding'][$key] == '1') { ?>
-				<li><img src="<?php echo $this->webroot; ?>common/images/search/search_column_li_<?php echo $key; ?>.png" width="110" height="33" alt="<?php echo $val; ?>" /></li>
-<?php     } else { ?>
-				<li><img src="<?php echo $this->webroot; ?>common/images/search/search_column_li_<?php echo $key; ?>_off.png" width="110" height="33" alt="<?php echo $val; ?>" /></li>
-<?php     } ?>
+
+
+<?php         if ($factoryBuilding['FactoryBuilding'][$key] == '1') { ?>
+					<li class="type-item d-inline-block on p-10">
+						<?php echo $val; ?>
+					</li>
+<?php         } else { ?>
+					<li class="type-item d-inline-block off p-10">
+						<?php echo $val; ?>
+					</li>
+<?php         } ?>
+
 <?php } ?>
 			</ul>
 			<table summary="Infrastructure environment and facilities">

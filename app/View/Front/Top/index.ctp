@@ -22,7 +22,7 @@
 				</div>
 
 			</div>
-			<p class="search_area_read">Please click the area which you want to find factory, industrial park or warehouse in Vietnam.</p>
+			<p class="search_area_read f-14">Please click the area which you want to find factory, industrial park or warehouse in Vietnam.</p>
 			<p id="map"><img src="<?php echo $this->webroot; ?>common/images/search/factory_index_map.png" alt="" width="730" height="710" border="0" usemap="#Map" />
 				<map name="Map" id="Map">
 					<area shape="rect" coords="140,589,280,619" href="<?php echo $this->webroot; ?>factory/area/list/2/" />

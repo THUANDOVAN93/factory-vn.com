@@ -398,22 +398,21 @@ div.search_area_other ul li {
 	background:url(../images/column_bg.png) repeat 0 0;
 }
 .search_list_map_nav {
+	display: flex;
 	border:2px solid #1b1b1b;
 }
 .search_list_map_nav dt {
-	float:left;
-	width:68px;
 	background-color:#1b1b1b;
+	color: #fff;
+	font-size: 18px;
+	padding: 0 20px;
 }
 .search_list_map_nav dd {
-	float:left;
 }
 .search_list_map_nav dd ul {
-	margin-left:-5px;
-	padding:8px 0 0 0;
+	padding: 4px 0;
 }
 .search_list_map_nav dd li {
-	float:left;
 	padding-left:12px;
 	line-height:29px;
 }
@@ -422,7 +421,6 @@ div.search_area_other ul li {
 	padding-left:3px;
 }
 .search_list_map_nav dd li label {
-	float:left;
 	display:block;
 	padding-left:32px;
 	background-repeat:no-repeat;
@@ -769,7 +767,7 @@ div.search_area_other ul li {
 }
 .search_column_section table th span {
 	display: block;
-	color: #666;
+	color: #000;
 	font-size: 10px;
 	font-family: Verdana, Geneva, sans-serif;
 }
@@ -787,6 +785,33 @@ div.search_area_other ul li {
 	margin-right: 6px;
     margin-bottom: 6px;
     line-height: 18px;
+}
+
+.search_column_type .type-item {
+	width: 110px;
+	background: #fbf7ef;
+	box-sizing: border-box;
+	text-align: center;
+	margin-right: 6px;
+    margin-bottom: 6px;
+    line-height: 18px;
+    font-size: 10px;
+}
+.search_column_type .type-item.on {
+	border: 1px solid #f7ab00;
+}
+.search_column_type .type-item.off {
+	border: 1px solid #e4e4e4;
+	position: relative;
+}
+.search_column_type .type-item.off:after {
+	position:absolute;
+	content: "";
+    top:0px;
+    left:0px;
+    bottom:0px;
+    right:0px;
+    background-color:rgba(225, 225, 217, 0.41);
 }
 .search_column_section li span {
 }
@@ -955,7 +980,7 @@ p.detail_read_txt {
 }
 .detail_read_section table th span {
 	display: block;
-	color: #666;
+	color: #000;
 	font-size: 10px;
 	font-family: Verdana, Geneva, sans-serif;
 	font-weight: normal;
@@ -973,7 +998,6 @@ p.detail_read_txt {
 }
 .detail_article_feature li {
 	float:left;
-	padding:0 10px 10px 0;
 }
 .detail_article_feature table {
 	width:100%;
@@ -990,7 +1014,7 @@ p.detail_read_txt {
 }
 .detail_article_feature table th span {
 	display: block;
-	color: #666;
+	color: #000;
 	font-size: 10px;
 	font-family: Verdana, Geneva, sans-serif;
 	font-weight: normal;

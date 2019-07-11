@@ -4,18 +4,19 @@
 		<!-- topicpath/ -->
 		<ul id="topicpath">
 			<li class="home"><a href="<?php echo $this->webroot; ?>">TOP</a></li>
-			<li>工場・工業用地を探す ベトナム全域工業団地から探す</li>
+			<li>Search factory / industrial site Search from all industrial areas in Vietnam</li>
 		</ul>
 		<!-- /topicpath -->
 
 		<!-- search_header/ -->
 		<div class="search_header clearfix">
-			<h1><img src="<?php echo $this->webroot; ?>common/images/search/factory_header_ttl.png" width="730" height="40" alt="ベトナムの工業地帯・工業団地一覧" /></h1>
+			<h2 class="title-row">Search from all industrial areas in Vietnam
+			</h2>
 		</div>
 		<!-- /search_header -->
 
 		<!-- search_area/ -->
-		<p class="search_area_read">ベトナムの工場・工業団地物件を検索したいエリアをクリックして下さい。</p>
+		<p class="search_area_read f-14">Please click on the area where you want to search for factories and industrial estates in Vietnam.</p>
 		<p id="map"><img src="<?php echo $this->webroot; ?>common/images/search/factory_index_map.png" alt="" width="730" height="710" border="0" usemap="#Map" />
 			<map name="Map" id="Map">
 				<area shape="rect" coords="140,589,280,619" href="<?php echo $this->webroot; ?>factory/area/list/2/" />

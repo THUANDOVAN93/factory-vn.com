@@ -12,7 +12,7 @@
 
 		<!-- search_header/ -->
 		<div class="search_header clearfix">
-			<h2 class="title-row search-title">Search from all industrial areas in Vietnam
+			<h2 class="title-row">Search from all industrial areas in Vietnam
 			</h2>
 		</div>
 		<!-- /search_header -->
@@ -44,9 +44,9 @@
 		<?php echo $this->Form->hidden('xml_url', array('id'=>'xml_url', 'value'=>$this->webroot . 'map/factory/')); ?>
 
 		<dl class="search_list_map_nav clearfix">
-			<dt><span class="search_list_map_icon">Icon</span></dt>
-			<dd>
-				<ul class="clearfix">
+			<dt class="d-flex align-items-center">Icon</dt>
+			<dd class="d-flex w-100">
+				<ul class="d-flex clearfix align-items-center justify-content-betwen w-100">
 					<li class="search_list_map_nav_factory01">
 						<label for="list_map_nav01"><?php echo $this->Form->checkbox('list_map_nav01', array('value' => '1', 'class' => 'list_map_nav', 'checked' => true)); ?>Industrial zone</label>
 					</li>
@@ -235,15 +235,26 @@
 			<div class="search_column_section">
 				<ul class="clearfix first">
 <?php     if (isset($factoryBuilding['FactoryBuilding']['giz']) && !empty($factoryBuilding['FactoryBuilding']['giz'])) { ?>
-					<li class="border-gray bk-gray">General Processing Zone (GIZ)</li>
+					<li class="border-gray bk-gray p-y-10">General Processing Zone (GIZ)</li>
 <?php     } ?>
 <?php     if (isset($factoryBuilding['FactoryBuilding']['epz']) && !empty($factoryBuilding['FactoryBuilding']['epz'])) { ?>
-					<li class="border-gray bk-gray">Output Processing Zone (EPZ)</li>
+					<li class="border-gray bk-gray p-y-10">Output Processing Zone (EPZ)</li>
 <?php     } ?>
 <?php     if (isset($factoryBuilding['FactoryBuilding']['fz']) && !empty($factoryBuilding['FactoryBuilding']['fz'])) { ?>
-					<li class="border-gray bk-gray">Free zone (FZ)</li>
+					<li class="border-gray bk-gray p-y-10">Free zone (FZ)</li>
 <?php     } ?>
-					<li><img src="<?php echo $this->webroot; ?>common/images/search/search_column_factory_industrial<?php echo h($factoryBuilding['FactoryBuilding']['industrial_park_id']); ?>.png" alt="工業団地" /></li>
+
+					<?php if ($factoryBuilding['FactoryBuilding']['industrial_park_id'] == 1) { ?>
+					<li class="border-gray bk-gray p-y-10">Industrial park</li>
+					<?php } ?>
+
+					<?php if ($factoryBuilding['FactoryBuilding']['industrial_park_id'] == 2) { ?>
+					<li class="border-gray bk-gray p-y-10">Industrial park (EAT not approved)</li>
+					<?php } ?>
+
+					<?php if ($factoryBuilding['FactoryBuilding']['industrial_park_id'] == 3) { ?>
+					<li class="border-gray bk-gray p-y-10">Outside Industrial park</li>
+					<?php } ?>
 				</ul>
 				<table summary="Property Details">
 					<col width="110">
@@ -263,17 +274,21 @@
 						</td>
 					</tr>
 				</table>
-				<ul class="clearfix">
+				<ul class="clearfix search_column_type">
 <?php     foreach(Configure::read('Facility.FactoryBuilding') as $key => $val) { ?>
 <?php         if ($factoryBuilding['FactoryBuilding'][$key] == '1') { ?>
-					<li><img src="<?php echo $this->webroot; ?>common/images/search/search_column_li_<?php echo $key; ?>.png" width="110" height="33" alt="<?php echo $val; ?>" /></li>
+					<li class="type-item d-inline-block on p-10">
+						<?php echo $val; ?>
+					</li>
 <?php         } else { ?>
-					<li><img src="<?php echo $this->webroot; ?>common/images/search/search_column_li_<?php echo $key; ?>_off.png" width="110" height="33" alt="<?php echo $val; ?>" /></li>
+					<li class="type-item d-inline-block off p-10">
+						<?php echo $val; ?>
+					</li>
 <?php         } ?>
 
 <?php     } ?>
 				</ul>
-				<p class="imgbtn"><a class="button-red hover-dark" href="<?php echo $this->webroot; ?>factory/area/detail/<?php echo h($factoryBuilding['FactoryBuilding']['id']); ?>">Details of the property</a></p>
+				<p class="imgbtn"><a class="button-red hover-dark" href="<?php echo $this->webroot; ?>factory/area/detail/<?php echo h($factoryBuilding['FactoryBuilding']['id']); ?>">See Details of this property</a></p>
 			</div>
 		</div>
 <?php } ?>
