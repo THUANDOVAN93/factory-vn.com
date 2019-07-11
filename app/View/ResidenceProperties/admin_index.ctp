@@ -1,10 +1,10 @@
 <div class="row-fluid">
 
-	<h2><?php __h('住居部屋管理'); ?></h2>
+	<h2><?php __h('Residential Room Management'); ?></h2>
 	<ul class="nav nav-tabs">
-		<li class="active"><a href="<?php echo $this->webroot; ?>admin/residence_properties"><?php __h('住居部屋一覧'); ?></a></li>
-		<li><a href="<?php echo $this->webroot; ?>admin/residence_properties/add"><?php __h('住居部屋の追加'); ?></a></li>
-		<li class="disabled"><a><?php __h('住居部屋の編集'); ?></a></li>
+		<li class="active"><a href="<?php echo $this->webroot; ?>admin/residence_properties"><?php __h('Residential Room List'); ?></a></li>
+		<li><a href="<?php echo $this->webroot; ?>admin/residence_properties/add"><?php __h('Add a room'); ?></a></li>
+		<li class="disabled"><a><?php __h('Edit room'); ?></a></li>
 	</ul>
 
 	<?php echo $this->Form->create('ResidenceProperty', array('url' => 'search', 'class' => 'form-inline')); ?>
@@ -18,7 +18,7 @@
 			<tr>
 				<th><?php __h('フロント表示'); ?></th>
 				<td><?php echo $this->Form->select('visible', __arrTranslate(Configure::read('Visible')), array('empty' => true)); ?></td>
-				<th><?php __h('売り物件'); ?>/<?php __h('貸し物件'); ?></th>
+				<th><?php __h('For sale'); ?>/<?php __h('Rental Property'); ?></th>
 				<td><?php echo $this->Form->select('sale_or_rent', __arrTranslate(Configure::read('SaleOrRent')), array('empty' => true)); ?></td>
 			</tr>
 		</table>

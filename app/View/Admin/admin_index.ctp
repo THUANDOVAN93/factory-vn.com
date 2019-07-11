@@ -1,14 +1,14 @@
 <div class="container">
 <?php if ($residenceAlertCount > 0) { ?>
-	<h2 class="lead"><?php echo __('住居物件') ?>(<?php echo $residenceAlertCount; ?><?php echo __('件中') ?><?php echo count($residenceBuildings); ?><?php echo __('件まで表示') ?>)</h2>
+	<h2 class="lead"><?php echo __('Residential property ') ?>(<?php echo count($residenceBuildings); ?><?php echo __(' Out of ') ?><?php echo $residenceAlertCount; ?>)</h2>
 	<table class="table table-striped">
 		<tr>
-			<th><?php echo __('物件名') ?></th>
-			<th><?php echo __('物件種別') ?></th>
-			<th><?php echo __('エリア') ?></th>
-			<th><?php echo __('更新日') ?></th>
-			<th><?php echo __('更新頻度') ?></th>
-			<th class="actions"><?php echo __('操作') ?></th>
+			<th><?php echo __('Property Name') ?></th>
+			<th><?php echo __('Property Type') ?></th>
+			<th><?php echo __('Area') ?></th>
+			<th><?php echo __('Date Update') ?></th>
+			<th><?php echo __('Frequency Update') ?></th>
+			<th class="actions"><?php echo __('Action') ?></th>
 		</tr>
 <?php     foreach ($residenceBuildings as $residenceBuilding) { ?>
 		<tr class="error">
@@ -20,7 +20,7 @@
 			<td style="width: 10%" class="actions">
 				<div class="btn-group">
 <?php         if (!empty($roleStaff)) { ?>
-					<a class="btn btn-small" href="<?php echo $this->webroot; ?>admin/residence_buildings/edit/<?php echo $residenceBuilding['ResidenceBuilding']['id']; ?>"><?php echo __('編集') ?></a>
+					<a class="btn btn-small" href="<?php echo $this->webroot; ?>admin/residence_buildings/edit/<?php echo $residenceBuilding['ResidenceBuilding']['id']; ?>"><?php echo __('Edit') ?></a>
 <?php         } ?>
 				</div>
 			</td>
@@ -29,15 +29,15 @@
 	</table>
 <?php } ?>
 <?php if ($officeAlertCount > 0) { ?>
-	<h2 class="lead"><?php echo __('事務所物件') ?>(<?php echo $officeAlertCount; ?><?php echo __('件中') ?><?php echo count($officeBuildings); ?><?php echo __('件まで表示') ?>)</h2>
+	<h2 class="lead"><?php echo __('Property Office ') ?>(<?php echo count($officeBuildings); ?><?php echo __(' Out of ') ?><?php echo $officeAlertCount; ?>)</h2>
 	<table class="table table-striped">
 		<tr>
-			<th><?php echo __('物件名') ?></th>
-			<th><?php echo __('物件種別') ?></th>
-			<th><?php echo __('エリア') ?></th>
-			<th><?php echo __('更新日') ?></th>
-			<th><?php echo __('更新頻度') ?></th>
-			<th class="actions"><?php echo __('操作') ?></th>
+			<th><?php echo __('Property Name') ?></th>
+			<th><?php echo __('Property Type') ?></th>
+			<th><?php echo __('Area') ?></th>
+			<th><?php echo __('Date Update') ?></th>
+			<th><?php echo __('Frequency Update') ?></th>
+			<th class="actions"><?php echo __('Action') ?></th>
 		</tr>
 <?php     foreach ($officeBuildings as $officeBuilding) { ?>
 		<tr class="error">
@@ -49,7 +49,7 @@
 			<td style="width: 10%" class="actions">
 				<div class="btn-group">
 <?php         if (!empty($roleStaff)) { ?>
-					<a class="btn btn-small" href="<?php echo $this->webroot; ?>admin/office_buildings/edit/<?php echo $officeBuilding['OfficeBuilding']['id']; ?>"><?php echo __('編集') ?></a>
+					<a class="btn btn-small" href="<?php echo $this->webroot; ?>admin/office_buildings/edit/<?php echo $officeBuilding['OfficeBuilding']['id']; ?>"><?php echo __('Edit') ?></a>
 <?php         } ?>
 				</div>
 			</td>
@@ -58,15 +58,15 @@
 	</table>
 <?php } ?>
 <?php if ($factoryAlertCount > 0) { ?>
-	<h2 class="lead"><?php echo __('工場物件') ?>(<?php echo $factoryAlertCount; ?><?php echo __('件中') ?><?php echo count($factoryBuildings); ?><?php echo __('件まで表示') ?>)</h2>
+	<h2 class="lead"><?php echo __('Factory property ') ?>(<?php echo count($factoryBuildings); ?><?php echo __(' Out of ') ?><?php echo $factoryAlertCount; ?>)</h2>
 	<table class="table table-striped">
 		<tr>
-			<th><?php __('物件名') ?></th>
-			<th><?php echo __('物件種別') ?></th>
-			<th><?php echo __('エリア') ?></th>
-			<th><?php echo __('更新日') ?></th>
-			<th><?php echo __('更新頻度') ?></th>
-			<th class="actions"><?php echo __('操作') ?></th>
+			<th><?php __('Property Name') ?></th>
+			<th><?php echo __('Property Type') ?></th>
+			<th><?php echo __('Area') ?></th>
+			<th><?php echo __('Date Update') ?></th>
+			<th><?php echo __('Frequency Update') ?></th>
+			<th class="actions"><?php echo __('Action') ?></th>
 		</tr>
 <?php     foreach ($factoryBuildings as $factoryBuilding) { ?>
 		<tr class="error">
@@ -78,7 +78,7 @@
 			<td style="width: 10%" class="actions">
 				<div class="btn-group">
 <?php         if (!empty($roleStaff)) { ?>
-					<a class="btn btn-small" href="<?php echo $this->webroot; ?>admin/factory_buildings/edit/<?php echo $factoryBuilding['FactoryBuilding']['id']; ?>"><?php echo __('編集') ?></a>
+					<a class="btn btn-small" href="<?php echo $this->webroot; ?>admin/factory_buildings/edit/<?php echo $factoryBuilding['FactoryBuilding']['id']; ?>"><?php echo __('Edit') ?></a>
 <?php         } ?>
 				</div>
 			</td>

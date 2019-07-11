@@ -163,13 +163,13 @@ class AdminController extends AppController {
     }
 
     public function admin_login() {
-        $this->set('title_for_layout', 'ダッシュボード | 管理画面');
+        $this->set('title_for_layout', 'Dashboard | Management screen');
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
                 return $this->redirect($this->Auth->redirect());
             } else {
                 $this->Session->setFlash(
-                    'ユーザーIDとパスワードが一致しません。',
+                    'User ID and password do not match.',
                     'alert',
                     array(
                         'plugin' => 'TwitterBootstrap',

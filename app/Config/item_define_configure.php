@@ -119,8 +119,8 @@ Configure::write('FactoryZone', array(
  * フロント表示
  */
 Configure::write('SaleOrRent', array(
-    1 => '売り物件',
-    2 => '貸し物件',
+    1 => 'For sale',
+    2 => 'Rental Property',
 ));
 
 /**

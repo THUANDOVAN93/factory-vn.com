@@ -355,3 +355,9 @@ msgstr "Unit"
 
 msgid "ヘクタール"
 msgstr "Hectare"
+
+msgid "売り物件"
+msgstr "For sale"
+
+msgid "貸し物件"
+msgstr "Rental Property"

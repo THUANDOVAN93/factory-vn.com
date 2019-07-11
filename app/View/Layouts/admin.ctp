@@ -39,79 +39,75 @@
 			<div class="container">
 				<a href="<?php echo $this->webroot; ?>admin"><img src="<?php echo $this->webroot; ?>img/logo.png" alt="TDC ADMINISTRATION CONSOLE" /></a>
 				<ul class="nav pull-right">
-<?php /* 物件管理 */ ?>
 <?php if (!empty($roleStaff)) { ?>
 					<li class="dropdown">
 						<a href="" class="dropdown-toggle" data-toggle="dropdown">
-							物件管理
+							Management
 							<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="<?php echo $this->webroot; ?>admin/residence_buildings">住居物件管理</a></li>
-							<li><a href="<?php echo $this->webroot; ?>admin/residence_properties">住居部屋管理</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/residence_buildings">Residential Management</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/residence_properties">Residential Room Management</a></li>
 							<li class="divider"></li>
-							<li><a href="<?php echo $this->webroot; ?>admin/office_buildings">事務所物件管理</a></li>
-							<li><a href="<?php echo $this->webroot; ?>admin/office_properties">事務所部屋管理</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/office_buildings">Office Management</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/office_properties">Office Room Management</a></li>
 							<li class="divider"></li>
-							<li><a href="<?php echo $this->webroot; ?>admin/factory_buildings">工場物件管理</a></li>
-							<li><a href="<?php echo $this->webroot; ?>admin/factory_properties">工場区画管理</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/factory_buildings">Factory Management</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/factory_properties">Factory Area Management</a></li>
 						</ul>
 					</li>
 <?php } ?>
-<?php /* ユーザー管理 */ ?>
 <?php if (!empty($roleManager)) { ?>
 					<li class="dropdown">
 						<a href="" class="dropdown-toggle" data-toggle="dropdown">
-							ユーザー管理
+							User Management
 							<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="<?php echo $this->webroot; ?>admin/users">ユーザー管理</a></li>
-							<li><a href="<?php echo $this->webroot; ?>admin/roles">権限管理</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/users">User Management</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/roles">Authority Management</a></li>
 						</ul>
 					</li>
 <?php } ?>
-<?php /* マスタ管理 */ ?>
 <?php if (!empty($roleAdmin)) { ?>
 					<li class="dropdown">
 						<a href="" class="dropdown-toggle" data-toggle="dropdown">
-							マスタ管理
+							Master Admin
 							<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="<?php echo $this->webroot; ?>admin/add_informations">TOP表示項目管理</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/add_informations">TOP Management</a></li>
 							<li class="divider"></li>
-							<li><a href="<?php echo $this->webroot; ?>admin/areas">エリア管理</a></li>
-							<li><a href="<?php echo $this->webroot; ?>admin/factory_areas">工場エリア管理</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/areas">Area Management</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/factory_areas">Factory Area Management</a></li>
 							<li class="divider"></li>
-							<li><a href="<?php echo $this->webroot; ?>admin/lines">路線管理</a></li>
-							<li><a href="<?php echo $this->webroot; ?>admin/stations">駅管理</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/lines">Route Management</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/stations">Station Management</a></li>
 							<li class="divider"></li>
-							<li><a href="<?php echo $this->webroot; ?>admin/residence_categories">住居種別管理</a></li>
-							<li><a href="<?php echo $this->webroot; ?>admin/residence_layouts">住居間取り管理</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/residence_categories">House Type Management</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/residence_layouts">House Floor Flan Management</a></li>
 							<li class="divider"></li>
-							<li><a href="<?php echo $this->webroot; ?>admin/office_categories">事務所種別管理</a></li>
-							<li><a href="<?php echo $this->webroot; ?>admin/office_layouts">事務所間取り管理</a></li>
-							<li><a href="<?php echo $this->webroot; ?>admin/office_person_nums">事務所人数管理</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/office_categories">Office Type Management</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/office_layouts">Office Floor Plan Management</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/office_person_nums">Office Number Management</a></li>
 							<li class="divider"></li>
-							<li><a href="<?php echo $this->webroot; ?>admin/factory_categories">工場種別管理</a></li>
-							<li><a href="<?php echo $this->webroot; ?>admin/factory_sub_categories">区画種別管理</a></li>
-							<li><a href="<?php echo $this->webroot; ?>admin/industrial_parks">工業団地内外管理</a></li>
-							<li><a href="<?php echo $this->webroot; ?>admin/factory_tenants">工場入居企業管理</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/factory_categories">Factory Type Management</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/factory_sub_categories">Partition Type Management</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/industrial_parks">Industrial Park In/Out side Management</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/factory_tenants">Factory Tenant Company Management</a></li>
 						</ul>
 					</li>
 <?php } ?>
-<?php /* ログイン名表示 */ ?>
 <?php if (!empty($username)) { ?>
 					<li class="dropdown">
 						<a href="" class="dropdown-toggle" data-toggle="dropdown">
-						<?php echo $username; ?> さん
+						<?php echo $username; ?>
 						<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="<?php echo $this->webroot; ?>admin/logout">ログアウト</a></li>
+							<li><a href="<?php echo $this->webroot; ?>admin/logout">Logout</a></li>
 							<li class="divider"></li>
-							<li><a href="ja" class="lang">日本語</a></li>
+							<li><a href="ja" class="lang">Japanese</a></li>
 							<li><a href="en" class="lang">English</a></li>
 						</ul>
 					</li>
