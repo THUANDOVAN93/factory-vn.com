@@ -2,9 +2,9 @@
 
 /* dowa.css */
 @import url(reset.css);
-@import url(global.css?ver=3);
+@import url(global.css?ver=2);
 @import url(index.css?ver=3);
-@import url(detail.css);
+@import url(detail.css?ver=1);
 
 
 /* ===== print ===== */

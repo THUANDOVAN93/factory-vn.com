@@ -414,14 +414,15 @@ div.search_area_other ul li {
 }
 .search_list_map_nav dd li {
 	padding-left:12px;
-	line-height:29px;
+	height: 28px;
 }
 .search_list_map_nav dd li img {
 	vertical-align:middle;
 	padding-left:3px;
 }
 .search_list_map_nav dd li label {
-	display:block;
+	display:flex;
+	align-items: center;
 	padding-left:32px;
 	background-repeat:no-repeat;
 	background-position:0 50%;
@@ -462,6 +463,7 @@ div.search_area_other ul li {
 .search_list_map_nav dd li input {
 	font-size:20px;
 	vertical-align:middle;
+	margin-right: 5px;
 }
 
 /* search_nav */

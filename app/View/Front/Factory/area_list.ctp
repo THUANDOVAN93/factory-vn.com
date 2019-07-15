@@ -47,13 +47,13 @@
 			<dt class="d-flex align-items-center">Icon</dt>
 			<dd class="d-flex w-100">
 				<ul class="d-flex clearfix align-items-center justify-content-betwen w-100">
-					<li class="search_list_map_nav_factory01">
+					<li class="d-flex search_list_map_nav_factory01">
 						<label for="list_map_nav01"><?php echo $this->Form->checkbox('list_map_nav01', array('value' => '1', 'class' => 'list_map_nav', 'checked' => true)); ?>Industrial zone</label>
 					</li>
-					<li class="search_list_map_nav_factory02">
+					<li class="d-flex search_list_map_nav_factory02">
 						<label for="list_map_nav02"><?php echo $this->Form->checkbox('list_map_nav02', array('value' => '2', 'class' => 'list_map_nav', 'checked' => true)); ?>Factory</label>
 					</li>
-					<li class="search_list_map_nav_factory03">
+					<li class="d-flex search_list_map_nav_factory03">
 						<label for="list_map_nav03"><?php echo $this->Form->checkbox('list_map_nav03', array('value' => '3', 'class' => 'list_map_nav', 'checked' => true)); ?>Warehouse</label>
 					</li>
 				</ul>

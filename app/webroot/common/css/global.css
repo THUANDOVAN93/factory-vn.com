@@ -611,10 +611,8 @@ li.contents_fontmenu_nav03 a {
 .contents_header_inquiry p a {
 	background: #d50101;
 	display:block;
-	width:180px;
-	height:37px;
+	padding: 10px 40px;
 	text-align: center;
-	line-height: 35px;
 	color: #fff;
 	text-transform: uppercase;
 	font-weight: bold;
