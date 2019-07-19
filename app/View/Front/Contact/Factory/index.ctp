@@ -111,8 +111,8 @@
 				</table>
 				<div id="btn">
 					<ul class="clearfix">
-						<li class="fl"><a id="confirm" onclick="$('#form').submit();return false;">入力内容の確認</a></li>
-						<li class="fr"><a id="reset" onclick="$('#form')[0].reset();return false;">リセット</a></li>
+						<li class="fl"><a id="confirm" onclick="$('#form').submit();return false;">Confirm your inquiry</a></li>
+						<li class="fr"><a id="reset" onclick="$('#form')[0].reset();return false;">Reset</a></li>
 					</ul>
 				</div>
 			<?php echo $this->Form->end(); ?>
