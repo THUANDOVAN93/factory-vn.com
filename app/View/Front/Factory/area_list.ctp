@@ -19,6 +19,11 @@
 
 		<!-- search_list/ -->
 		<h3 class="search_list_ttl">Properties in <?php echo h($factoryArea['FactoryArea']['name']); ?></h3>
+		<div style="margin: 20px 10px;">
+			<?php
+				echo html_entity_decode($factoryArea['FactoryArea']['note']);
+			?>
+		</div>
 
 		<!-- search_list_map_nav/ -->
 		<div id="map_canvas" class="search_list_map"></div>

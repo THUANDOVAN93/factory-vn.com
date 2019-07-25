@@ -22,13 +22,21 @@ class FactoryArea extends AppModel {
         'name' => array(
             'notempty' => array(
                 'rule'     => array('notempty'),
-                'message'  => '工場エリア名を入力してください。',
+                'message'  => 'Please enter the factory area name.',
                 'required' => true,
                 'last'     => true,
             ),
             'maxlength' => array(
                 'rule'     => array('maxlength', 64),
-                'message'  => '工場エリア名は64文字以内で入力してください。',
+                'message'  => 'Enter the factory area name within 64 characters.',
+                'required' => true,
+                'last'     => true,
+            ),
+        ),
+        'note' => array(
+            'maxlength' => array(
+                'rule'     => array('maxlength', 1000),
+                'message'  => 'Enter the factory area description within 1000 characters.',
                 'required' => true,
                 'last'     => true,
             ),
@@ -36,7 +44,7 @@ class FactoryArea extends AppModel {
         'address' => array(
             'maxLength' => array(
                 'rule' => array('maxLength', '512'),
-                'message' => '最大512文字で入力してください。',
+                'message' => 'Please enter up to 512 characters.',
                 'required' => true,
                 'last' => true,
             ),
@@ -44,7 +52,7 @@ class FactoryArea extends AppModel {
         'lat' => array(
             'decimal' => array(
                 'rule'     => array('decimal'),
-                'message'  => '緯度の入力値が不正です。再度、マップを選択してください。',
+                'message'  => 'Latitude input value is invalid. Please select a map again.',
                 'required' => true,
                 'last'     => true,
             ),
@@ -52,7 +60,7 @@ class FactoryArea extends AppModel {
         'lng' => array(
             'decimal' => array(
                 'rule'     => array('decimal'),
-                'message'  => '経度の入力値が不正です。再度、マップを選択してください。',
+                'message'  => 'The longitude input value is invalid. Please select a map again.',
                 'required' => true,
                 'last'     => true,
             ),

@@ -16,10 +16,20 @@ class FactoryAreasController extends AdminController {
     public $paginate = array(
         'sort' => 'id'
     );
+/**
+ * CK Editor
+ *
+ * @var array
+ */
+    public $helpers = array(
+        'Wysiwyg.Wysiwyg' => array(
+            '_editor' => 'Ck'
+    ));
 
 /**
  * Uses
  *
+
  * @var array
  */
     public $uses = array('FactoryArea');
@@ -36,7 +46,7 @@ class FactoryAreasController extends AdminController {
             $this->redirect('/admin/');
         }
 
-        $this->set('title_for_layout', sprintf(Configure::read('Admin.Message.Title'), '工場エリア管理'));
+        $this->set('title_for_layout', sprintf(Configure::read('Admin.Message.Title'), 'Factory area management'));
     }
 
 /**
@@ -59,13 +69,11 @@ class FactoryAreasController extends AdminController {
         if ($this->request->is('post')) {
 
             $this->FactoryArea->create();
-
             if ($this->FactoryArea->save($this->request->data)) {
                 $this->Session->setFlash(Configure::read('Admin.Message.DbUpdateSuccess'), 'default', array('class' => 'alert alert-success'));
                 $this->redirect(array('action' => 'index'));
             } else {
 
-                // 位置情報を再設定
                 $factoryAreaData = $this->request->data;
                 $factoryAreaData['FactoryArea']['lat_disabled'] = $factoryAreaData['FactoryArea']['lat'];
                 $factoryAreaData['FactoryArea']['lng_disabled'] = $factoryAreaData['FactoryArea']['lng'];

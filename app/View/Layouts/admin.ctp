@@ -30,6 +30,7 @@
 			})
 		})
 	</script>
+	<?php echo $this->fetch('script'); ?>
 </head>
 
 <body>
@@ -131,7 +132,6 @@
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<?php echo $this->Html->script('bootstrap.min'); ?>
-	<?php echo $this->fetch('script'); ?>
 
 </body>
 </html>

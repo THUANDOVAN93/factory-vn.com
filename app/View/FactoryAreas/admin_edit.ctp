@@ -3,18 +3,18 @@
 
 <div class="row-fluid">
 
-	<h2><?php __h('工場エリア管理'); ?></h2>
+	<h2><?php __h('Factory area management'); ?></h2>
 	<ul class="nav nav-tabs">
-		<li><a href="<?php echo $this->webroot; ?>admin/factory_areas"><?php __h('工場エリア一覧'); ?></a></li>
-		<li><a href="<?php echo $this->webroot; ?>admin/factory_areas/add"><?php __h('工場エリアの追加'); ?></a></li>
-		<li class="active"><a><?php __h('工場エリアの編集'); ?></a></li>
+		<li><a href="<?php echo $this->webroot; ?>admin/factory_areas"><?php __h('Factory area list'); ?></a></li>
+		<li><a href="<?php echo $this->webroot; ?>admin/factory_areas/add"><?php __h('Add factory area'); ?></a></li>
+		<li class="active"><a><?php __h('Edit factory area'); ?></a></li>
 	</ul>
 
 	<?php echo $this->Form->create('FactoryArea', array('class' => 'form-horizontal')); ?>
 		<fieldset>
 			<table class="table-input">
 				<tr>
-					<th><?php __h('工場エリア名'); ?><span class="label label-important require-s"><?php __h('必須'); ?></span></th>
+					<th><?php __h('Factory area name'); ?><span class="label label-important require-s"><?php __h('Required'); ?></span></th>
 					<td><?php echo $this->Form->text('name'); ?>
 <?php $err = isset($validErrors['name'][0]);?>
 <?php if ($err) { ?>
@@ -23,7 +23,16 @@
 					</td>
 				</tr>
 				<tr>
-					<th><?php __h('位置情報取得用住所'); ?></th>
+					<th><?php __h('Factory area description'); ?><span class="label label-important"></span></th>
+					<td><?php echo $this->Wysiwyg->textarea('FactoryArea.note'); ?>
+<?php $err = isset($validErrors['name'][0]);?>
+<?php if ($err) { ?>
+					<p class="alert alert-error alert_valid">※<?php __h($validErrors['note'][0]); ?></p>
+<?php } ?>
+					</td>
+				</tr>
+				<tr>
+					<th><?php __h('Location information'); ?></th>
 					<td>
 						<?php echo $this->Form->text('address', array('id' => 'map_address', 'class'=>'span5')); ?>
 <?php $err = isset($validErrors['address'][0]);?>
@@ -33,7 +42,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th><?php __h('位置情報(緯度･経度)'); ?></th>
+					<th><?php __h('Location information (latitude / longitude)'); ?></th>
 					<td>
 					<?php echo $this->Form->text('lat_disabled', array('class' => 'map_lat', 'disabled' => 'disabled')); ?>
 					<?php echo $this->Form->text('lng_disabled', array('class' => 'map_lng', 'disabled' => 'disabled')); ?>
@@ -47,14 +56,14 @@
 <?php if ($err) { ?>
 					<p class="alert alert-error alert_valid">※<?php __h($validErrors['lng'][0]); ?></p>
 <?php } ?>
-					<a href="#" id="set_location_btn" class="btn btn-small" ><?php __h('住所から位置情報を設定する'); ?></a>
+					<a href="#" id="set_location_btn" class="btn btn-small" ><?php __h('Set location information from address'); ?></a>
 					<div id="map_canvas" style="height:<?php echo Configure::read('Admin.Map.Size.Height'); ?>px;width: <?php echo Configure::read('Admin.Map.Size.Width'); ?>px;"></div>
 					</td>
 				</tr>
 			</table>
 
 			<?php echo $this->Form->hidden('id', array()); ?>
-			<div class="form-actions"><button class="btn" type="submit"><?php __h('保存'); ?></button></div>
+			<div class="form-actions"><button class="btn" type="submit"><?php __h('SAVE'); ?></button></div>
 		</fieldset>
 	<?php echo $this->Form->end(); ?>
 </div>
