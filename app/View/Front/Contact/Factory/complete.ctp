@@ -6,10 +6,9 @@
 		<!-- /topicpath -->
 		
 		<div id="contactCnt">
-			<h2><img src="<?php echo $this->webroot; ?>common/images/contact/header_ttl.png" width="730" height="40" alt="お問い合わせ" /></h2>
+			<h2 class="contact-title">Inquiry Form</h2>
 			<p class="thanksTxt">
-				Please contact us.<br />
-				Thank you very much.<br />
+				Thank you for sending inquiry.<br />
 				We will contact you later.<br />
 				Please wait for a while.
 			</p>

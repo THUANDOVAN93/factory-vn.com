@@ -6,7 +6,7 @@
 		<!-- /topicpath -->
 		
 		<div id="contactCnt">
-			<h2><img src="<?php echo $this->webroot; ?>common/images/contact/header_ttl.png" width="730" height="40" alt="お問い合わせ" /></h2>
+			<h2 class="contact-title">Inquiry Form</h2>
 			<p>Please confirm your entry and if you make a mistake, click on the "send" button.</p>
 
 				<table border="0" cellspacing="0" cellpadding="0" summary="お問い合せフォーム">
