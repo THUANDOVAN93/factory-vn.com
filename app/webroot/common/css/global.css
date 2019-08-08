@@ -473,9 +473,8 @@ body {
 #copyright {
 	color: #fff;
 	clear:both;
-	height:12px;
-	line-height:12px;
 	text-align: center;
+	font-size: 8px;
 }
 
 /* contents */
@@ -1006,4 +1005,39 @@ li.contents_fontmenu_nav03 a {
 
 .f-14 {
 	font-size: 14px;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.mg-x-10 {
+	margin: 10px auto;
+}
+
+.arrow-right:before {
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-left: 4px solid #000;
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0;
+}
+
+.arrow-right {
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+	padding: 0 30px 0 10px;
+}
+
+.flag-jp:after {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 12px;
+	right: 0;
+	background-image: url("/common/images/icon/flag-jp.png");
 }

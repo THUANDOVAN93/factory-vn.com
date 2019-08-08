@@ -32,10 +32,11 @@
 			<li><a href="/privacy/">Privacy policy</a></li>
 		</ul>
 		<dl class="info">
-			<dt>FACT-LINK MARKETPLACE CO.,LTD</dt>
+			<dt>TDC INTERNATIONAL (VIET NAM) COMPANY LIMITED</dt>
 			<dd>Address: 602/43 Dien Bien Phu, Ward 22, Binh Thanh District, Ho Chi Minh City.</dd>
 			<dd>Tel: +84 888 767 138 - Email: info@fact-link.com.vn</dd>
 		</dl>
+		<p id="copyright">COPYRIGHT © TDC INTERNATIONAL (VIET NAM) COMPANY LIMITED ALL RIGHTS RESERVED.</p>
 	</div>
 </div>
 <!-- === /footer === -->

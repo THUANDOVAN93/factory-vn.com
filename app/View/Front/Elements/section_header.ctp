@@ -1,11 +1,6 @@
 
 		<!-- contents_header/ -->
-		<div class="contents_header">
-			<ul class="contents_nav">
-				<li class="contents_nav03"><a href="http://www.tdc-vietnam.com">JAPANESE</a></li>
-			</ul>
-			
-		</div>
+		<p class="text-right mg-x-10"><a class="arrow-right flag-jp" href="https://tdc-vietnam.com">JAPANESE</a></p>
 		<!-- /contents_header -->
 
 		<!-- contents_header_inquiry/ -->
