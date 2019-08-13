@@ -2,18 +2,18 @@
 <?php echo $this->Html->script('jquery.map'); ?>
 
 <div class="container">
-	<h2><?php __h('工場物件管理'); ?></h2>
+	<h2><?php __h('Workshop object management'); ?></h2>
 	<ul class="nav nav-tabs">
-		<li><a href="<?php echo $this->webroot; ?>admin/factory_buildings"><?php __h('工場物件一覧'); ?></a></li>
-		<li class="active"><a href="<?php echo $this->webroot; ?>admin/factory_buildings/add"><?php __h('工場物件の追加'); ?></a></li>
-		<li class="disabled"><a><?php __h('工場物件の編集'); ?></a></li>
+		<li><a href="<?php echo $this->webroot; ?>admin/factory_buildings"><?php __h('Factory Property List'); ?></a></li>
+		<li class="active"><a href="<?php echo $this->webroot; ?>admin/factory_buildings/add"><?php __h('Add factory property'); ?></a></li>
+		<li class="disabled"><a><?php __h('Edit factory properties'); ?></a></li>
 	</ul>
 	<?php echo $this->Form->create('FactoryBuilding', array('enctype' => 'multipart/form-data', 'class' => 'form-horizontal')); ?>
 		<fieldset>
-			<legend style="margin-bottom: 5px;"><?php __h('物件管理'); ?></legend>
+			<legend style="margin-bottom: 5px;"><?php __h('Object management'); ?></legend>
 			<table class="table-input">
 				<tr>
-					<th><?php __h('更新頻度'); ?><span class="label label-important require-s"><?php __h('必須'); ?></span></th>
+					<th><?php __h('Update frequency'); ?><span class="label label-important require-s"><?php __h('必須'); ?></span></th>
 					<td>
 <?php
   $radioValues = array();
@@ -69,10 +69,10 @@
 	$role_manager = $this->Session->read('Auth.User.Role.role_manager');
 ?>
 		<fieldset>
-			<legend style="padding-top: 15px; margin-bottom: 5px;"><?php __h('物件情報'); ?></legend>
+			<legend style="padding-top: 15px; margin-bottom: 5px;"><?php __h('Property information'); ?></legend>
 			<table class="table-input">
 				<tr>
-					<th><?php __h('工場エリア'); ?><span class="label label-important require-s"><?php __h('必須'); ?></span></th>
+					<th><?php __h('Factory area'); ?><span class="label label-important require-s"><?php __h('必須'); ?></span></th>
 					<td>
 						<?php echo $this->Form->select('factory_area_id', $factoryAreas, array('empty'=>false)); ?>
 <?php $err = isset($validErrors['FactoryBuilding']['factory_area_id'][0]);?>
@@ -102,7 +102,7 @@
 					</td>
 				</tr-->
 				<tr>
-					<th><?php __h('工業団地ゾーン'); ?></th>
+					<th><?php __h('Industrial park zone'); ?></th>
 					<td>
 						<label class="checkbox">
 <?php foreach (__arrTranslate(Configure::read('FactoryZone')) as $column => $name) { ?>
@@ -113,7 +113,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th><?php __h('工業団地内外'); ?><span class="label label-important require-s"><?php __h('必須'); ?></span></th>
+					<th><?php __h('Inside and outside industrial park'); ?><span class="label label-important require-s"><?php __h('必須'); ?></span></th>
 					<td>
 						<?php echo $this->Form->select('industrial_park_id', $industrialParks, array('empty'=>false)); ?>
 <?php $err = isset($validErrors['FactoryBuilding']['industrial_park_id'][0]);?>
@@ -123,7 +123,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th><?php __h('開発業者'); ?></th>
+					<th><?php __h('Developer'); ?></th>
 					<td>
 						<?php echo $this->Form->text('developer', array('class'=>'span5')); ?>
 <?php $err = isset($validErrors['FactoryBuilding']['developer'][0]);?>
@@ -133,7 +133,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th><?php __h('住所'); ?></th>
+					<th><?php __h('Street address'); ?></th>
 					<td>
 						<?php echo $this->Form->text('address', array('class'=>'span5')); ?>
 <?php $err = isset($validErrors['FactoryBuilding']['address'][0]);?>
@@ -143,7 +143,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th><?php __h('位置情報取得用住所'); ?></th>
+					<th><?php __h('Location information'); ?></th>
 					<td>
 						<?php echo $this->Form->text('map_address', array('id' => 'map_address', 'class'=>'span5')); ?>
 <?php $err = isset($validErrors['FactoryBuilding']['map_address'][0]);?>

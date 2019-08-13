@@ -1,10 +1,10 @@
 <div class="container">
 
-	<h2><?php __h('工場物件管理'); ?></h2>
+	<h2><?php __h('Workshop object management'); ?></h2>
 	<ul class="nav nav-tabs">
-		<li class="active"><a href="<?php echo $this->webroot; ?>admin/factory_buildings"><?php __h('工場物件一覧'); ?></a></li>
-		<li><a href="<?php echo $this->webroot; ?>admin/factory_buildings/add"><?php __h('工場物件の追加'); ?></a></li>
-		<li class="disabled"><a><?php __h('工場物件の編集'); ?></a></li>
+		<li class="active"><a href="<?php echo $this->webroot; ?>admin/factory_buildings"><?php __h('Factory Property List'); ?></a></li>
+		<li><a href="<?php echo $this->webroot; ?>admin/factory_buildings/add"><?php __h('Add factory property'); ?></a></li>
+		<li class="disabled"><a><?php __h('Edit factory properties'); ?></a></li>
 	</ul>
 
 	<?php echo $this->Form->create('FactoryBuilding', array('url' => 'search', 'class' => 'form-inline')); ?>
@@ -12,7 +12,7 @@
 			<tr>
 				<th><?php __h('物件ID'); ?></th>
 				<td><?php echo $this->Form->text('id',array()); ?></td>
-				<th><?php __h('プロジェクト名'); ?></th>
+				<th><?php __h('Project name'); ?></th>
 				<td><?php echo $this->Form->text('name', array()); ?></td>
 			</tr>
 			<tr>

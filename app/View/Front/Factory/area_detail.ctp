@@ -62,6 +62,9 @@
 					<dd><?php echo date('Y/m/d H:i', strtotime($factoryBuilding['FactoryBuilding']['modified'])); ?></dd>
 				</dl>
 			</div>
+			<div style="margin: 10px 5px;">
+				<?php echo html_entity_decode($factoryBuilding['FactoryBuilding']['note']); ?>
+			</div>
 		</div>
 		<!-- /detail_read -->
 
