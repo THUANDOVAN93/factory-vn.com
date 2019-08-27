@@ -2,7 +2,7 @@
 
 /* dowa.css */
 @import url(reset.css);
-@import url(global.css?ver=4);
+@import url(global.css?ver=3);
 @import url(index.css?ver=4);
 @import url(detail.css?ver=5);
 
