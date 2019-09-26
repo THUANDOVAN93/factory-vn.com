@@ -35,7 +35,7 @@
 		<!-- detail_header/ -->
 		<div class="detail_header clearfix">
 			<h1 class="title-row">Property Information</h1>
-			<!-- <p class="imgbtn"><a href="mailto:?subject=TOKYO DEVELOPMENT CONSULTANT&amp;body=<?php echo $this->Html->url('', true); ?>"><img src="<?php echo $this->webroot; ?>common/images/search/btn_smartphone.png" width="270" height="37" alt="この物件の情報を携帯・スマホへ送る" /></a></p> -->
+			<!-- <p class="imgbtn"><a href="mailto:?subject=TOKYO DEVELOPMENT CONSULTANT&amp;body=<?php echo $this->Url->build('', true); ?>"><img src="<?php echo $this->webroot; ?>common/images/search/btn_smartphone.png" width="270" height="37" alt="この物件の情報を携帯・スマホへ送る" /></a></p> -->
 		</div>
 		<!-- /detail_header -->
 
@@ -511,7 +511,7 @@
 					</dd>
 				</dl>
 			</div> -->
-			<!-- <p class="imgbtn"><a href="mailto:?subject=TOKYO DEVELOPMENT CONSULTANT&amp;body=<?php echo $this->Html->url('', true); ?>"><img src="<?php echo $this->webroot; ?>common/images/search/btn_smartphone.png" width="270" height="37" alt="この物件の情報を携帯・スマホへ送る" /></a></p> -->
+			<!-- <p class="imgbtn"><a href="mailto:?subject=TOKYO DEVELOPMENT CONSULTANT&amp;body=<?php echo $this->Url->build('', true); ?>"><img src="<?php echo $this->webroot; ?>common/images/search/btn_smartphone.png" width="270" height="37" alt="この物件の情報を携帯・スマホへ送る" /></a></p> -->
 		</div>
 
 <?php $isProperty = false; ?>
@@ -715,7 +715,7 @@
 <?php } ?>
 <?php if ($isProperty) { ?>
 		<div class="detail_article_table imgbtn clearfix">
-			<!-- <p class="imgbtn"><a href="mailto:?subject=TOKYO DEVELOPMENT CONSULTANT&amp;body=<?php echo $this->Html->url('', true); ?>"><img src="<?php echo $this->webroot; ?>common/images/search/btn_smartphone.png" width="270" height="37" alt="この物件の情報を携帯・スマホへ送る" /></a></p> -->
+			<!-- <p class="imgbtn"><a href="mailto:?subject=TOKYO DEVELOPMENT CONSULTANT&amp;body=<?php echo $this->Url->build('', true); ?>"><img src="<?php echo $this->webroot; ?>common/images/search/btn_smartphone.png" width="270" height="37" alt="この物件の情報を携帯・スマホへ送る" /></a></p> -->
 		</div>
 <?php } ?>
 

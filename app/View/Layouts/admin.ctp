@@ -119,10 +119,10 @@
 	</div>
 
 	<div class="container">
-<?php echo $this->Session->flash('auth-alert'); ?>
-<?php echo $this->Session->flash(); ?>
-<?php echo $this->Session->flash('db-alert'); ?>
-<?php echo $this->Session->flash('update-alert'); ?>
+<?php echo $this->Flash->render('auth-alert'); ?>
+<?php echo $this->Flash->render(); ?>
+<?php echo $this->Flash->render('db-alert'); ?>
+<?php echo $this->Flash->render('update-alert'); ?>
 
 		<?php echo $this->fetch('content'); ?>
 
