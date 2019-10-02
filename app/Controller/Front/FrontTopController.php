@@ -30,7 +30,6 @@ class FrontTopController extends FrontController {
             $addInfoId = $addInfo['AddInformation']['id'];
             $size = 8;
             if ($addInfoId == '1' || $addInfoId == '2') {
-                //新着、おすすめは1段
                 $size = 4;
             }
             $residenceBuildings['add_information' . $addInfoId] = $this->ResidenceBuilding->getTopIconList('add_information' .$addInfoId , $size);
@@ -41,7 +40,6 @@ class FrontTopController extends FrontController {
             $addInfoId = $addInfo['AddInformation']['id'];
             $size = 8;
             if ($addInfoId == '1' || $addInfoId == '2') {
-                //新着、おすすめは1段
                 $size = 4;
             }
             $officeBuildings['add_information' . $addInfoId] = $this->OfficeBuilding->getTopIconList('add_information' .$addInfoId , $size);
@@ -52,14 +50,24 @@ class FrontTopController extends FrontController {
             $addInfoId = $addInfo['AddInformation']['id'];
             $size = 8;
             if ($addInfoId == '1' || $addInfoId == '2') {
-                //新着、おすすめは1段
                 $size = 4;
             }
             $factoryBuildings['add_information' . $addInfoId] = $this->FactoryBuilding->getTopIconList('add_information' .$addInfoId , $size);
         }
 
-         // Add Left Menu (Edit By Thuando)
-        $factoryAreas = $this->FactoryArea->find('all');
+        // Add Left Menu (Edit By Thuando)
+        $factoryAreas = $this->FactoryArea->find('all',
+            array(
+                'fields' => array('id', 'name', 'area'),
+                'order' => array('area', 'id ASC'),
+                'contain' => array(
+                    'FactoryBuildingOfArea' => array(
+                        'fields' => array('id', 'name'),
+                    )
+                )
+            )
+        );
+        //debug($factoryAreas);exit();
         $this->set('factoryAreas', $factoryAreas);
 
         $this->set(compact(

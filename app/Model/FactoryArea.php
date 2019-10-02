@@ -20,6 +20,8 @@ class FactoryArea extends AppModel {
             'dependent'     => true
         )
     );
+    
+    public $actsAs = array('Containable');
 
 /**
  * Validation rules

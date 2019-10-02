@@ -1,4 +1,4 @@
-<script src="http://maps.google.com/maps/api/js?v=3&sensor=false" type="text/javascript" charset="UTF-8"></script>
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyDRe-SLe-oVJhmp1x0wDGUdtVOmFceE8eU&v=quarterly&v=3" type="text/javascript" charset="UTF-8"></script>
 <?php echo $this->Html->script('jquery.map'); ?>
 
 <div class="row-fluid">
@@ -19,6 +19,17 @@
 <?php $err = isset($validErrors['name'][0]);?>
 <?php if ($err) { ?>
 					<p class="alert alert-error alert_valid">※<?php __h($validErrors['name'][0]); ?></p>
+<?php } ?>
+					</td>
+				</tr>
+
+				<tr>
+					<th><?php __h('area'); ?></th>
+					<td>
+						<?php echo $this->Form->select('area', __arrTranslate(Configure::read('largeArea')), array('empty'=>false)); ?>
+<?php $err = isset($validErrors['area'][0]);?>
+<?php if ($err) { ?>
+						<p class="alert alert-error alert_valid">※<?php __h($validErrors['area'][0]); ?></p>
 <?php } ?>
 					</td>
 				</tr>

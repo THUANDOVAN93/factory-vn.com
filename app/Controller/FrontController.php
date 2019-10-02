@@ -22,14 +22,23 @@ class FrontController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-
-        // $resCnt = $this->ResidenceBuilding->find('count', array('conditions'=>array('ResidenceBuilding.visible'=>1)));
-        // $ofcCnt = $this->OfficeBuilding->find('count', array('conditions'=>array('OfficeBuilding.visible'=>1)));
-        // $fctCnt = $this->FactoryBuilding->find('count', array('conditions'=>array('FactoryBuilding.visible'=>1)));
+        
         $fctCnt = $this->FactoryBuilding->find('count', array('conditions'=>array('FactoryBuilding.visible'=>1)));
 
         $totalBuildingCount = ($fctCnt);
         $this->set('totalBuildingCount', $totalBuildingCount);
+        $factoryAreas = $this->FactoryArea->find('all',
+            array(
+                'fields' => array('id', 'name', 'area'),
+                'order' => array('area', 'id ASC'),
+                'contain' => array(
+                    'FactoryBuildingOfArea' => array(
+                        'fields' => array('id', 'name'),
+                    )
+                )
+            )
+        );
+        $this->set('factoryAreas', $factoryAreas);
     }
 
 }

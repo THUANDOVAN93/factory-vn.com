@@ -23,7 +23,7 @@
 
 			</div>
 			<p class="search_area_read f-14">Please click the area which you want to find factory, industrial park or warehouse in Vietnam.</p>
-			<p id="map"><img src="<?php echo $this->webroot; ?>common/images/search/factory_index_map.png" alt="" width="730" height="710" border="0" usemap="#Map" />
+			<p id="map"><img src="<?php echo $this->webroot; ?>common/images/search/factory_index_map.png?ver=2" alt="map Vietnam" width="730" height="710" border="0" usemap="#Map" />
 				<map name="Map" id="Map">
 					<area shape="rect" coords="140,589,280,619" href="<?php echo $this->webroot; ?>factory/area/list/2/" />
 					<area shape="rect" coords="549,578,690,609" href="<?php echo $this->webroot; ?>factory/area/list/3/" />
@@ -35,6 +35,9 @@
 					<area shape="rect" coords="246,348,385,377" href="<?php echo $this->webroot; ?>factory/area/list/9/" />
 					<area shape="rect" coords="546,86,685,115" href="<?php echo $this->webroot; ?>factory/area/list/11/" />
 					<area shape="rect" coords="37,175,177,205" href="<?php echo $this->webroot; ?>factory/area/list/12/" />
+					<!-- Add nghe an province -->
+					<area shape="rect" coords="37,232,177,260" href="<?php echo $this->webroot; ?>factory/area/list/28/" />
+					<!-- Add nghe an province -->
 					<area shape="rect" coords="397,18,537,48" href="<?php echo $this->webroot; ?>factory/area/list/13/" />
 					<area shape="rect" coords="545,125,685,155" href="<?php echo $this->webroot; ?>factory/area/list/14/" />
 					<area shape="rect" coords="545,164,685,194" href="<?php echo $this->webroot; ?>factory/area/list/15/" />
