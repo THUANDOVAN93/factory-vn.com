@@ -7,7 +7,7 @@
 		
 		<div id="contactCnt">
 			<h2 class="contact-title">Inquiry Form</h2>
-			<p>Please confirm your entry and if you make a mistake, click on the "send" button.</p>
+			<p>Please confirm your inquiry information and click "send" button.</p>
 
 				<table border="0" cellspacing="0" cellpadding="0" summary="お問い合せフォーム">
 					<col width="25%" />

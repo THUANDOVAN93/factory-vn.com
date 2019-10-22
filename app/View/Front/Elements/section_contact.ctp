@@ -26,7 +26,8 @@
 <div id="contactCnt">
 
 <h3 class="contact_title">Inquiry form</h3>
-<p class="f-14">Please send inquiry by this form. <br>Based on your requirements such as location, area, purpose and when your business will start operation etc, we will provide options for you for free! </p>
+<p class="f-14">We can offer FREE consultation providing the available property (land or factory for rent) information with updated price based on your requirement (location, size, budget).</p>
+<p class="f-14">Please fill the form below and click 'Confirm your inquiry' button.</p>
 <div class="errorTxt">
 <?php $err = isset($validErrors['ContactFactory']['company_name'][0]); ?>
 <?php if ($err) { ?>

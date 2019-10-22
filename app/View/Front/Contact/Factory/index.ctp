@@ -5,7 +5,8 @@
 		
 		<div id="contactCnt">
 			<h2 class="contact-title">Inquiry Form</h2>
-			<p>Please send inquiry by this form.</p>
+			<p>We can offer FREE consultation providing the available property (land or factory for rent) information with updated price based on your requirement (location, size, budget).</p>
+			<p>Please fill the form below and click 'Confirm your inquiry' button.</p>
 			<ul id="tab">
 			</ul>
 			<div class="errorTxt">

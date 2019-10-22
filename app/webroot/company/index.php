@@ -50,19 +50,18 @@
 <th>Description</th>
 <td>
 <ul class="list clearfix">
-<li>Factory-vn.com is operated by FACT-LINK MARKETPLACE CO.,LTD which is established and managed by Japanese with the aim of supporting manufacturers in Vietnam. Having more than 10 years experience in Vietnam since establishment of 2007, we have wide range of factory options and reliable networks. </li>
-<li>The aim of factory-vn,com is provide the service that manufacturers who are going to establish factory in Vietnam can search and find suitable property such as factory, industrial park and warehouse. We will provide free options based on manufacturers's requirement such as location, area, purpose and the starting time of the factory.  On our website , we list most of the major industrial zone in Vietnam with full information of location, management, equipments.</li>
-<li>Besides factory-vn.com, FACT-LINK MARKETPLACE CO.,LTD operates Fact-link.com.vn which is the business directory in Vietnam where the manufacturers can search their potential customers or suppliers in Vietnam and fact-depot.com where the manufacturers can search and buy MRO products in Vietnam with quick delivery throughout Vietnam.</li>
+<li>TDC Vietnam is operated by  TDC INTERNATIONAL (VIET NAM) COMPANY LIMITED which is established and managed by Japanese with the aim of supporting manufacturers in Vietnam. Having more than 10 years experience in Vietnam since establishment of 2007, we have wide range of factory options and reliable networks.</li>
+<li>The aim of TDC Vietnam is provide the service that manufacturers who are going to establish factory in Vietnam can search and find suitable property such as factory, industrial park and warehouse. We will provide free options based on manufacturers's requirement such as location, area, purpose and the starting time of the factory. On our website , we list most of the major industrial zone in Vietnam with full information of location, management, equipments.</li>
 </ul>
 </td>
 </tr>
 <tr>
 <th scope="row">Company name</th>
-<td>FACT-LINK MARKETPLACE CO.,LTD</td>
+<td>TDC INTERNATIONAL (VIET NAM) COMPANY LIMITED</td>
 </tr>
 <tr>
 <th scope="row">Director</th>
-<td>Yukiko Yazumi (Ms.)</td>
+<td>Hitoshi Sato</td>
 </tr>
 <tr>
 <th scope="row">Establish</th>
@@ -83,26 +82,10 @@ Ho Chi Minh City, Vietnam.
 <tr>
 <th scope="row">Business Description</th>
 <td>
-<dl>
-<dt>Real estate brokerage</dt>
-<dd class="mb10">
-<ul class="list clearfix">
-<li>Operating factory-vn.com and providing information of factories, industrial park and warehouses in Vietnam for manufacturers.
-</li>
-</ul>
-</dd>
 
-<dt>MRO E-commerse</dt>
-<dd class="mb10">
-<ul class="list clearfix">
-<li>Operating fact-depot.com and selling more than 30,000 industrial products online and deliver throughout Vietnam.</li>
-</ul>
-</dd>
-
-<dt>Business directory of manufacturers</dt>
 <dd>
 <ul class="list clearfix">
-<li>Operating fact-link.com.vn, with more than 3,000 manufacturers in Vietnam, and managing the directory where manufactures can find potential customers and suppliers.</li>
+<li>Real estate brokerage Operating TDC Vietnam and providing information of factories, industrial park and warehouses in Vietnam for manufacturers.</li>
 </ul>
 </dd>
 </dl>
@@ -155,7 +138,7 @@ function initializeAccessMap () {
 	});
 
 	var content = '<div id="infoWindow" style="width:250px;height:130px;">' +
-	'<h1 style="font-weight:bold;">FACTORY VIETNAM</h1>' +
+	'<h1 style="font-weight:bold;">TDC VIETNAM</h1>' +
 	'<p style="margin-top:10px;">602/43 Dien Bien Phu, Ward 22, Binh Thanh District, Ho Chi Minh City</p>' +
 	'</div>';
 	var infowindow = new google.maps.InfoWindow({
